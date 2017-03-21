@@ -6,4 +6,10 @@
 //  Copyright © 2017 Iliyan Kupenov. All rights reserved.
 //
 
-import Foundation
+import SwinjectStoryboard
+
+extension SwinjectStoryboard {
+    class func setup() {
+        defaultContainer.register(Requesting.self) { _ in Requester() }
+    }
+}

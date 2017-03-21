@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061E4F5B34BFDF0AAD934D8F /* Pods_Meetup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B0A16BFC29E5C653B1C59F /* Pods_Meetup.framework */; };
 		300CB78C1E81C7C100C16FE2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300CB78B1E81C7C100C16FE2 /* HomeViewController.swift */; };
 		300CB78E1E81C82A00C16FE2 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300CB78D1E81C82A00C16FE2 /* NearbyViewController.swift */; };
+		307F14B51E81F0950076E60B /* SwinjectStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B41E81F0950076E60B /* SwinjectStoryboardExtension.swift */; };
+		307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B61E81F0E60076E60B /* PlaceProtocol.swift */; };
+		307F14B91E81F1030076E60B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B81E81F1030076E60B /* Place.swift */; };
+		307F14BD1E81F14A0076E60B /* LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14BC1E81F14A0076E60B /* LocationProtocol.swift */; };
+		307F14BF1E81F1670076E60B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14BE1E81F1670076E60B /* Location.swift */; };
+		307F14C11E81F18A0076E60B /* Requesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14C01E81F18A0076E60B /* Requesting.swift */; };
+		307F14C31E81F1A60076E60B /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14C21E81F1A60076E60B /* Requester.swift */; };
 		30C069EC1E817F1B001C1A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C069EB1E817F1B001C1A87 /* AppDelegate.swift */; };
 		30C069F11E817F1B001C1A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C069EF1E817F1B001C1A87 /* Main.storyboard */; };
 		30C069F31E817F1B001C1A87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C069F21E817F1B001C1A87 /* Assets.xcassets */; };
@@ -16,8 +24,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D5448EB76AF4419B553FBA0 /* Pods-Meetup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meetup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Meetup/Pods-Meetup.debug.xcconfig"; sourceTree = "<group>"; };
+		19B0A16BFC29E5C653B1C59F /* Pods_Meetup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meetup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A58F30374A6AF72A8529A72 /* Pods-Meetup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meetup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meetup/Pods-Meetup.release.xcconfig"; sourceTree = "<group>"; };
 		300CB78B1E81C7C100C16FE2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		300CB78D1E81C82A00C16FE2 /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NearbyViewController.swift; path = ViewControllers/NearbyViewController.swift; sourceTree = "<group>"; };
+		307F14B41E81F0950076E60B /* SwinjectStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwinjectStoryboardExtension.swift; path = Extensions/SwinjectStoryboardExtension.swift; sourceTree = "<group>"; };
+		307F14B61E81F0E60076E60B /* PlaceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceProtocol.swift; path = Models/PlaceProtocol.swift; sourceTree = "<group>"; };
+		307F14B81E81F1030076E60B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Models/Place.swift; sourceTree = "<group>"; };
+		307F14BC1E81F14A0076E60B /* LocationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationProtocol.swift; path = Models/LocationProtocol.swift; sourceTree = "<group>"; };
+		307F14BE1E81F1670076E60B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
+		307F14C01E81F18A0076E60B /* Requesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requesting.swift; path = Helpers/Requesting.swift; sourceTree = "<group>"; };
+		307F14C21E81F1A60076E60B /* Requester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requester.swift; path = Helpers/Requester.swift; sourceTree = "<group>"; };
 		30C069E81E817F1B001C1A87 /* Meetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C069EB1E817F1B001C1A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30C069F01E817F1B001C1A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -31,15 +49,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				061E4F5B34BFDF0AAD934D8F /* Pods_Meetup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A261D0D980020AF1BD91118 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D5448EB76AF4419B553FBA0 /* Pods-Meetup.debug.xcconfig */,
+				2A58F30374A6AF72A8529A72 /* Pods-Meetup.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		304ADB091E818ED2003E81D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				307F14B41E81F0950076E60B /* SwinjectStoryboardExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -49,6 +78,8 @@
 			children = (
 				30C069EA1E817F1B001C1A87 /* Meetup */,
 				30C069E91E817F1B001C1A87 /* Products */,
+				2A261D0D980020AF1BD91118 /* Pods */,
+				89F85D251925F5941BAF25CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +111,8 @@
 		30C069FD1E817F31001C1A87 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				307F14C01E81F18A0076E60B /* Requesting.swift */,
+				307F14C21E81F1A60076E60B /* Requester.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -87,6 +120,10 @@
 		30C069FE1E817F3E001C1A87 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				307F14B61E81F0E60076E60B /* PlaceProtocol.swift */,
+				307F14B81E81F1030076E60B /* Place.swift */,
+				307F14BC1E81F14A0076E60B /* LocationProtocol.swift */,
+				307F14BE1E81F1670076E60B /* Location.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -107,6 +144,14 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
+		89F85D251925F5941BAF25CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19B0A16BFC29E5C653B1C59F /* Pods_Meetup.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30C069FA1E817F1B001C1A87 /* Build configuration list for PBXNativeTarget "Meetup" */;
 			buildPhases = (
+				0F0CF073F8EEA0CE0DABFF70 /* [CP] Check Pods Manifest.lock */,
 				30C069E41E817F1B001C1A87 /* Sources */,
 				30C069E51E817F1B001C1A87 /* Frameworks */,
 				30C069E61E817F1B001C1A87 /* Resources */,
+				089AD35AE22DADC1EC456505 /* [CP] Embed Pods Frameworks */,
+				DAA40097B2041126D91F570F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,14 +222,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		089AD35AE22DADC1EC456505 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meetup/Pods-Meetup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F0CF073F8EEA0CE0DABFF70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAA40097B2041126D91F570F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Meetup/Pods-Meetup-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		30C069E41E817F1B001C1A87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */,
 				30C069EC1E817F1B001C1A87 /* AppDelegate.swift in Sources */,
+				307F14BF1E81F1670076E60B /* Location.swift in Sources */,
+				307F14BD1E81F14A0076E60B /* LocationProtocol.swift in Sources */,
 				300CB78C1E81C7C100C16FE2 /* HomeViewController.swift in Sources */,
+				307F14B91E81F1030076E60B /* Place.swift in Sources */,
 				300CB78E1E81C82A00C16FE2 /* NearbyViewController.swift in Sources */,
+				307F14B51E81F0950076E60B /* SwinjectStoryboardExtension.swift in Sources */,
+				307F14C31E81F1A60076E60B /* Requester.swift in Sources */,
+				307F14C11E81F18A0076E60B /* Requesting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +405,7 @@
 		};
 		30C069FB1E817F1B001C1A87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5448EB76AF4419B553FBA0 /* Pods-Meetup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Meetup/Info.plist;
@@ -314,6 +418,7 @@
 		};
 		30C069FC1E817F1B001C1A87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A58F30374A6AF72A8529A72 /* Pods-Meetup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Meetup/Info.plist;
