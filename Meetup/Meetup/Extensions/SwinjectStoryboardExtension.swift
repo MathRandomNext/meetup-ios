@@ -6,10 +6,13 @@
 //  Copyright © 2017 Iliyan Kupenov. All rights reserved.
 //
 
+import Swinject
 import SwinjectStoryboard
 
 extension SwinjectStoryboard {
     class func setup() {
+        Container.loggingFunction = nil
+        
         defaultContainer.register(Requesting.self) { _ in Requester() }
     }
 }
