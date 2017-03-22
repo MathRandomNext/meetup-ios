@@ -1,0 +1,10 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.2'
+use_frameworks!
+
+target 'Meetup' do
+  pod 'Swinject'
+  pod 'SwinjectStoryboard'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+end

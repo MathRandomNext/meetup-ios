@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pQL-br-m3P">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Nearby-->
+        <scene sceneID="DMB-Xt-WA5">
+            <objects>
+                <viewController id="IOX-4h-ctH" customClass="NearbyViewController" customModule="Meetup" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5l2-Za-rEn"/>
+                        <viewControllerLayoutGuide type="bottom" id="xTY-ud-qIp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="utB-WY-0ZH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Nearby" id="JZ7-Zi-dYo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EbF-G3-Aac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="172.82608695652175"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="gby-mL-tzH">
+            <objects>
+                <viewController id="FzA-bH-Sth" customClass="HomeViewController" customModule="Meetup" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OFA-YK-aXd"/>
+                        <viewControllerLayoutGuide type="bottom" id="1xf-gv-qIt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OZU-dm-l0P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="KXM-J8-ge3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O42-dx-5Ay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="-482.60869565217394"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="oJw-90-SxV">
+            <objects>
+                <tabBarController id="pQL-br-m3P" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="wIg-5T-VSA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.97254901960784312" green="0.31764705882352939" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="88A-eH-eon" kind="relationship" relationship="viewControllers" id="3CO-xv-yq2"/>
+                        <segue destination="d8G-5v-Lnc" kind="relationship" relationship="viewControllers" id="oVG-xB-fNX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V7S-JK-Kor" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-887" y="-154"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="AAJ-Am-XFu">
+            <objects>
+                <navigationController id="88A-eH-eon" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home-25" id="m7f-vg-GzJ">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="Home Filled-25"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xcd-7Q-4ga">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.98066282380000003" green="1" blue="0.97284381350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FzA-bH-Sth" kind="relationship" relationship="rootViewController" id="bMs-aO-mbB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hS-wj-7My" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="-482.60869565217394"/>
+        </scene>
+        <!--Nearby-->
+        <scene sceneID="aXz-9S-xwe">
+            <objects>
+                <navigationController id="d8G-5v-Lnc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Nearby" image="Near Me-25" id="jYR-gs-S9B">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="Near Me Filled-25"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IEx-Lm-aEo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.98066282380000003" green="1" blue="0.97284381350000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IOX-4h-ctH" kind="relationship" relationship="rootViewController" id="o1U-8Q-tVN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xxx-D8-6mF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="172.82608695652175"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Home Filled-25" width="25" height="25"/>
+        <image name="Home-25" width="25" height="25"/>
+        <image name="Near Me Filled-25" width="25" height="25"/>
+        <image name="Near Me-25" width="25" height="25"/>
+    </resources>
+</document>
