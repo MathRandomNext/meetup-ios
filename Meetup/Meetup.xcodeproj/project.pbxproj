@@ -65,6 +65,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		303024AF1E845D07008BDB05 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		304ADB091E818ED2003E81D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +101,7 @@
 		30C069EA1E817F1B001C1A87 /* Meetup */ = {
 			isa = PBXGroup;
 			children = (
+				303024AF1E845D07008BDB05 /* Services */,
 				304ADB091E818ED2003E81D7 /* Extensions */,
 				30C06A001E817F71001C1A87 /* Data */,
 				30C069FF1E817F4B001C1A87 /* ViewControllers */,
