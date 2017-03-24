@@ -10,6 +10,6 @@ import Foundation
 
 public protocol LocationServiceProtocol {
     
-    func getCurrentLocation() -> LocationProtocol?
+    var delegate: LocationServiceDelegate? { get set }
     
 }

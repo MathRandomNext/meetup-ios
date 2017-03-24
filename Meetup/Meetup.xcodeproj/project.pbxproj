@@ -31,6 +31,8 @@
 		30C069F11E817F1B001C1A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C069EF1E817F1B001C1A87 /* Main.storyboard */; };
 		30C069F31E817F1B001C1A87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C069F21E817F1B001C1A87 /* Assets.xcassets */; };
 		30C069F61E817F1B001C1A87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C069F41E817F1B001C1A87 /* LaunchScreen.storyboard */; };
+		30F9CC881E8569E20090DB74 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F9CC871E8569E20090DB74 /* MapKit.framework */; };
+		30F9CC8A1E8583600090DB74 /* LocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9CC891E8583600090DB74 /* LocationServiceDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		30C069F21E817F1B001C1A87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30C069F51E817F1B001C1A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30C069F71E817F1B001C1A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30F9CC871E8569E20090DB74 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		30F9CC891E8583600090DB74 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationServiceDelegate.swift; path = Services/LocationServiceDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,7 @@
 				3020DD051E848D8D0036320C /* Swinject.framework in Frameworks */,
 				3020DD061E848D8D0036320C /* SwinjectStoryboard.framework in Frameworks */,
 				3020DD001E848D860036320C /* Alamofire.framework in Frameworks */,
+				30F9CC881E8569E20090DB74 /* MapKit.framework in Frameworks */,
 				3020DCFE1E848D820036320C /* CoreLocation.framework in Frameworks */,
 				061E4F5B34BFDF0AAD934D8F /* Pods_Meetup.framework in Frameworks */,
 			);
@@ -104,6 +109,7 @@
 			children = (
 				3020DD071E848EA60036320C /* LocationServiceProtocol.swift */,
 				3020DD091E848ECE0036320C /* LocationService.swift */,
+				30F9CC891E8583600090DB74 /* LocationServiceDelegate.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 		89F85D251925F5941BAF25CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30F9CC871E8569E20090DB74 /* MapKit.framework */,
 				3020DD011E848D8D0036320C /* SwiftyJSON.framework */,
 				3020DD021E848D8D0036320C /* Swinject.framework */,
 				3020DD031E848D8D0036320C /* SwinjectStoryboard.framework */,
@@ -241,6 +248,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
 						};
@@ -344,6 +354,7 @@
 				3020DD141E849D990036320C /* LocationFactory.swift in Sources */,
 				307F14C31E81F1A60076E60B /* Requester.swift in Sources */,
 				3020DD0A1E848ECE0036320C /* LocationService.swift in Sources */,
+				30F9CC8A1E8583600090DB74 /* LocationServiceDelegate.swift in Sources */,
 				307F14C11E81F18A0076E60B /* Requesting.swift in Sources */,
 				3020DD121E849D810036320C /* LocationFactoryProtocol.swift in Sources */,
 			);

@@ -8,31 +8,70 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, LocationServiceDelegate {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    
     var locationService: LocationServiceProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let currLocation = locationService.getCurrentLocation()
-        print(currLocation)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.locationService.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    */
-
+    
+    func locationService(_ service: LocationServiceProtocol, didUpdateLocation location: LocationProtocol) {
+        self.setTitle(location: location)
+    }
+    
+    func locationService(_ service: LocationServiceProtocol, didFailWithError error: Error) {
+        self.clearTitle()
+    }
+    
+    private func setTitle(location: LocationProtocol) {
+        var title: String?
+        var subtitle: String?
+        
+        func createSecondaryTitle(_ location: LocationProtocol) -> String? {
+            var subtitle: String?
+            
+            let locationLocality = location.locality ?? ""
+            let locationThoroughfare = location.thoroughfare ?? ""
+            let locationSubThoroughfare = location.subThoroughfare ?? ""
+            
+            if !locationLocality.isEmpty {
+                subtitle = locationLocality
+            }
+            
+            if !locationThoroughfare.isEmpty && (subtitle ?? "").isEmpty {
+                subtitle = "\(locationThoroughfare) \(locationSubThoroughfare)"
+            } else if !locationThoroughfare.isEmpty && (subtitle ?? "").isEmpty {
+                subtitle! += ", \(locationThoroughfare) \(locationSubThoroughfare)"
+            }
+            
+            return subtitle
+        }
+        
+        let locationName = location.name ?? ""
+        
+        if locationName.isEmpty {
+            title = createSecondaryTitle(location)
+        } else {
+            title = locationName
+            subtitle = createSecondaryTitle(location)
+        }
+        
+        self.titleLabel.text = title
+        self.subtitleLabel.text = subtitle
+    }
+    
+    private func clearTitle() {
+        self.titleLabel.text = "Unknown location"
+        self.subtitleLabel.text = nil
+    }
+    
 }

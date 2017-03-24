@@ -11,23 +11,23 @@ public struct Location: LocationProtocol {
     public var latitude: Double
     public var longitude: Double
     public var name: String?
-    public var city: String?
-    public var state: String?
+    public var locality: String?
     public var thoroughfare: String?
+    public var subThoroughfare: String?
     
     init(latitude: Double,
          longitude: Double,
          name: String? = nil,
-         city: String? = nil,
-         state: String? = nil,
-         thoroughfare: String? = nil) {
+         locality: String? = nil,
+         thoroughfare: String? = nil,
+         subThoroughfare: String? = nil) {
         
         self.latitude = latitude
         self.longitude = longitude
         self.name = name
-        self.city = city
-        self.state = state
+        self.locality = locality
         self.thoroughfare = thoroughfare
+        self.subThoroughfare = subThoroughfare
     }
     
 }

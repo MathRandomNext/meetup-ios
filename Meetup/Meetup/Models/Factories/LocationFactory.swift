@@ -13,16 +13,16 @@ public struct LocationFactory: LocationFactoryProtocol {
     public func createLocation(latitude: Double,
                                longitude: Double,
                                name: String? = nil,
-                               city: String? = nil,
-                               state: String? = nil,
-                               thoroughfare: String? = nil) -> LocationProtocol {
+                               locality: String? = nil,
+                               thoroughfare: String? = nil,
+                               subThoroughfare: String? = nil) -> LocationProtocol {
         
         return Location(latitude: latitude,
                         longitude: longitude,
                         name: name,
-                        city: city,
-                        state: state,
-                        thoroughfare: thoroughfare)
+                        locality: locality,
+                        thoroughfare: thoroughfare,
+                        subThoroughfare: subThoroughfare)
     }
     
 }

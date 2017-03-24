@@ -13,9 +13,9 @@ public protocol LocationFactoryProtocol {
     func createLocation(latitude: Double,
                         longitude: Double,
                         name: String?,
-                        city: String?,
-                        state: String?,
-                        thoroughfare: String?) -> LocationProtocol
+                        locality: String?,
+                        thoroughfare: String?,
+                        subThoroughfare: String?) -> LocationProtocol
     
 }
 
@@ -24,11 +24,16 @@ extension LocationFactoryProtocol {
     func createLocation(latitude: Double,
                         longitude: Double,
                         name: String? = nil,
-                        city: String? = nil,
-                        state: String? = nil,
-                        thoroughfare: String? = nil) -> LocationProtocol {
+                        locality: String? = nil,
+                        thoroughfare: String? = nil,
+                        subThoroughfare: String? = nil) -> LocationProtocol {
         
-        return createLocation(latitude: latitude, longitude: longitude, name: name, city: city, state: state, thoroughfare: thoroughfare)
+        return createLocation(latitude: latitude,
+                              longitude: longitude,
+                              name: name,
+                              locality: locality,
+                              thoroughfare: thoroughfare,
+                              subThoroughfare: subThoroughfare)
     }
     
 }
