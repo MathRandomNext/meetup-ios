@@ -13,6 +13,15 @@ extension SwinjectStoryboard {
     class func setup() {
         Container.loggingFunction = nil
         
+        defaultContainer.storyboardInitCompleted(HomeViewController.self) { (r, c) in
+            c.locationService = r.resolve(LocationServiceProtocol.self)
+        }
+        
         defaultContainer.register(Requesting.self) { _ in Requester() }
+        defaultContainer.register(LocationServiceProtocol.self) { r in
+            LocationService(locationFactory: r.resolve(LocationFactoryProtocol.self)!)
+        }
+        
+        defaultContainer.register(LocationFactoryProtocol.self) { _ in LocationFactory() }
     }
 }

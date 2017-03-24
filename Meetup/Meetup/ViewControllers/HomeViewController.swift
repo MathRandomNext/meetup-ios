@@ -10,8 +10,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var locationService: LocationServiceProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let currLocation = locationService.getCurrentLocation()
+        print(currLocation)
     }
 
     override func didReceiveMemoryWarning() {

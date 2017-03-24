@@ -10,6 +10,16 @@
 		061E4F5B34BFDF0AAD934D8F /* Pods_Meetup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B0A16BFC29E5C653B1C59F /* Pods_Meetup.framework */; };
 		300CB78C1E81C7C100C16FE2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300CB78B1E81C7C100C16FE2 /* HomeViewController.swift */; };
 		300CB78E1E81C82A00C16FE2 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300CB78D1E81C82A00C16FE2 /* NearbyViewController.swift */; };
+		3020DCFE1E848D820036320C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DCFD1E848D820036320C /* CoreLocation.framework */; };
+		3020DD001E848D860036320C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DCFF1E848D860036320C /* Alamofire.framework */; };
+		3020DD041E848D8D0036320C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DD011E848D8D0036320C /* SwiftyJSON.framework */; };
+		3020DD051E848D8D0036320C /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DD021E848D8D0036320C /* Swinject.framework */; };
+		3020DD061E848D8D0036320C /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DD031E848D8D0036320C /* SwinjectStoryboard.framework */; };
+		3020DD081E848EA60036320C /* LocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD071E848EA60036320C /* LocationServiceProtocol.swift */; };
+		3020DD0A1E848ECE0036320C /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD091E848ECE0036320C /* LocationService.swift */; };
+		3020DD0C1E8497250036320C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD0B1E8497250036320C /* Constants.swift */; };
+		3020DD121E849D810036320C /* LocationFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD111E849D810036320C /* LocationFactoryProtocol.swift */; };
+		3020DD141E849D990036320C /* LocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD131E849D990036320C /* LocationFactory.swift */; };
 		307F14B51E81F0950076E60B /* SwinjectStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B41E81F0950076E60B /* SwinjectStoryboardExtension.swift */; };
 		307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B61E81F0E60076E60B /* PlaceProtocol.swift */; };
 		307F14B91E81F1030076E60B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B81E81F1030076E60B /* Place.swift */; };
@@ -29,6 +39,16 @@
 		2A58F30374A6AF72A8529A72 /* Pods-Meetup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meetup.release.xcconfig"; path = "Pods/Target Support Files/Pods-Meetup/Pods-Meetup.release.xcconfig"; sourceTree = "<group>"; };
 		300CB78B1E81C7C100C16FE2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		300CB78D1E81C82A00C16FE2 /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NearbyViewController.swift; path = ViewControllers/NearbyViewController.swift; sourceTree = "<group>"; };
+		3020DCFD1E848D820036320C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3020DCFF1E848D860036320C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Meetup-aogtlgfvhyfrxlgpqlbkhxovmowy/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		3020DD011E848D8D0036320C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/Meetup-aogtlgfvhyfrxlgpqlbkhxovmowy/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		3020DD021E848D8D0036320C /* Swinject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swinject.framework; path = "../../../Library/Developer/Xcode/DerivedData/Meetup-aogtlgfvhyfrxlgpqlbkhxovmowy/Build/Products/Debug-iphonesimulator/Swinject/Swinject.framework"; sourceTree = "<group>"; };
+		3020DD031E848D8D0036320C /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = "../../../Library/Developer/Xcode/DerivedData/Meetup-aogtlgfvhyfrxlgpqlbkhxovmowy/Build/Products/Debug-iphonesimulator/SwinjectStoryboard/SwinjectStoryboard.framework"; sourceTree = "<group>"; };
+		3020DD071E848EA60036320C /* LocationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationServiceProtocol.swift; path = Services/LocationServiceProtocol.swift; sourceTree = "<group>"; };
+		3020DD091E848ECE0036320C /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = Services/LocationService.swift; sourceTree = "<group>"; };
+		3020DD0B1E8497250036320C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3020DD111E849D810036320C /* LocationFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationFactoryProtocol.swift; path = Models/Factories/LocationFactoryProtocol.swift; sourceTree = "<group>"; };
+		3020DD131E849D990036320C /* LocationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationFactory.swift; path = Models/Factories/LocationFactory.swift; sourceTree = "<group>"; };
 		307F14B41E81F0950076E60B /* SwinjectStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwinjectStoryboardExtension.swift; path = Extensions/SwinjectStoryboardExtension.swift; sourceTree = "<group>"; };
 		307F14B61E81F0E60076E60B /* PlaceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceProtocol.swift; path = Models/PlaceProtocol.swift; sourceTree = "<group>"; };
 		307F14B81E81F1030076E60B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Models/Place.swift; sourceTree = "<group>"; };
@@ -49,6 +69,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3020DD041E848D8D0036320C /* SwiftyJSON.framework in Frameworks */,
+				3020DD051E848D8D0036320C /* Swinject.framework in Frameworks */,
+				3020DD061E848D8D0036320C /* SwinjectStoryboard.framework in Frameworks */,
+				3020DD001E848D860036320C /* Alamofire.framework in Frameworks */,
+				3020DCFE1E848D820036320C /* CoreLocation.framework in Frameworks */,
 				061E4F5B34BFDF0AAD934D8F /* Pods_Meetup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,9 +90,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3020DD101E849D630036320C /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				3020DD111E849D810036320C /* LocationFactoryProtocol.swift */,
+				3020DD131E849D990036320C /* LocationFactory.swift */,
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
 		303024AF1E845D07008BDB05 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				3020DD071E848EA60036320C /* LocationServiceProtocol.swift */,
+				3020DD091E848ECE0036320C /* LocationService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -112,6 +148,7 @@
 				30C069F21E817F1B001C1A87 /* Assets.xcassets */,
 				30C069F41E817F1B001C1A87 /* LaunchScreen.storyboard */,
 				30C069F71E817F1B001C1A87 /* Info.plist */,
+				3020DD0B1E8497250036320C /* Constants.swift */,
 			);
 			path = Meetup;
 			sourceTree = "<group>";
@@ -128,6 +165,7 @@
 		30C069FE1E817F3E001C1A87 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3020DD101E849D630036320C /* Factories */,
 				307F14B61E81F0E60076E60B /* PlaceProtocol.swift */,
 				307F14B81E81F1030076E60B /* Place.swift */,
 				307F14BC1E81F14A0076E60B /* LocationProtocol.swift */,
@@ -155,6 +193,11 @@
 		89F85D251925F5941BAF25CC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3020DD011E848D8D0036320C /* SwiftyJSON.framework */,
+				3020DD021E848D8D0036320C /* Swinject.framework */,
+				3020DD031E848D8D0036320C /* SwinjectStoryboard.framework */,
+				3020DCFF1E848D860036320C /* Alamofire.framework */,
+				3020DCFD1E848D820036320C /* CoreLocation.framework */,
 				19B0A16BFC29E5C653B1C59F /* Pods_Meetup.framework */,
 			);
 			name = Frameworks;
@@ -284,15 +327,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */,
+				3020DD081E848EA60036320C /* LocationServiceProtocol.swift in Sources */,
 				30C069EC1E817F1B001C1A87 /* AppDelegate.swift in Sources */,
 				307F14BF1E81F1670076E60B /* Location.swift in Sources */,
 				307F14BD1E81F14A0076E60B /* LocationProtocol.swift in Sources */,
 				300CB78C1E81C7C100C16FE2 /* HomeViewController.swift in Sources */,
 				307F14B91E81F1030076E60B /* Place.swift in Sources */,
+				3020DD0C1E8497250036320C /* Constants.swift in Sources */,
 				300CB78E1E81C82A00C16FE2 /* NearbyViewController.swift in Sources */,
 				307F14B51E81F0950076E60B /* SwinjectStoryboardExtension.swift in Sources */,
+				3020DD141E849D990036320C /* LocationFactory.swift in Sources */,
 				307F14C31E81F1A60076E60B /* Requester.swift in Sources */,
+				3020DD0A1E848ECE0036320C /* LocationService.swift in Sources */,
 				307F14C11E81F18A0076E60B /* Requesting.swift in Sources */,
+				3020DD121E849D810036320C /* LocationFactoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
