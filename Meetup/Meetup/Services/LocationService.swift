@@ -11,19 +11,22 @@ import MapKit
 
 public class LocationService: NSObject, LocationServiceProtocol, CLLocationManagerDelegate {
     
-    private let locationManager = CLLocationManager()
-    
+    private var locationManager: CLLocationManager!
     private var locationFactory: LocationFactoryProtocol!
     private var currentLocationCoordinate: CLLocationCoordinate2D?
     
     init(locationFactory: LocationFactoryProtocol) {
         super.init()
+        self.locationManager = CLLocationManager()
         self.locationFactory = locationFactory
         self.locationManager.delegate = self
         self.locationManager.distanceFilter = CLLocationDistance(Constants.LocationOptions.Radius)
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
-        self.locationManager.startUpdatingLocation()
+        
+        if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.authorizedWhenInUse {
+            self.locationManager.startUpdatingLocation()
+        }
     }
     
     convenience override init() {
@@ -75,8 +78,13 @@ public class LocationService: NSObject, LocationServiceProtocol, CLLocationManag
         self.currentLocationCoordinate = locationManager.location?.coordinate
     }
     
+    func locationManager(manager: CLLocationManager!, didUpdateToLocation newLocation: CLLocation!, fromLocation oldLocation: CLLocation!) {
+        self.currentLocationCoordinate = newLocation.coordinate
+        print(newLocation)
+    }
+    
     public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
     }
-
+    
 }
