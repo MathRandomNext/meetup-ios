@@ -20,6 +20,8 @@
 		3020DD0C1E8497250036320C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD0B1E8497250036320C /* Constants.swift */; };
 		3020DD121E849D810036320C /* LocationFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD111E849D810036320C /* LocationFactoryProtocol.swift */; };
 		3020DD141E849D990036320C /* LocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD131E849D990036320C /* LocationFactory.swift */; };
+		306E44F41E872F20004A7BDB /* PlaceDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */; };
+		306E44F61E872F3F004A7BDB /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F51E872F3F004A7BDB /* PlaceData.swift */; };
 		307F14B51E81F0950076E60B /* SwinjectStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B41E81F0950076E60B /* SwinjectStoryboardExtension.swift */; };
 		307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B61E81F0E60076E60B /* PlaceProtocol.swift */; };
 		307F14B91E81F1030076E60B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B81E81F1030076E60B /* Place.swift */; };
@@ -32,7 +34,6 @@
 		30C069F31E817F1B001C1A87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C069F21E817F1B001C1A87 /* Assets.xcassets */; };
 		30C069F61E817F1B001C1A87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C069F41E817F1B001C1A87 /* LaunchScreen.storyboard */; };
 		30F9CC881E8569E20090DB74 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F9CC871E8569E20090DB74 /* MapKit.framework */; };
-		30F9CC8A1E8583600090DB74 /* LocationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F9CC891E8583600090DB74 /* LocationServiceDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,8 @@
 		3020DD0B1E8497250036320C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3020DD111E849D810036320C /* LocationFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationFactoryProtocol.swift; path = Models/Factories/LocationFactoryProtocol.swift; sourceTree = "<group>"; };
 		3020DD131E849D990036320C /* LocationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationFactory.swift; path = Models/Factories/LocationFactory.swift; sourceTree = "<group>"; };
+		306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDataProtocol.swift; path = Data/PlaceDataProtocol.swift; sourceTree = "<group>"; };
+		306E44F51E872F3F004A7BDB /* PlaceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceData.swift; path = Data/PlaceData.swift; sourceTree = "<group>"; };
 		307F14B41E81F0950076E60B /* SwinjectStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwinjectStoryboardExtension.swift; path = Extensions/SwinjectStoryboardExtension.swift; sourceTree = "<group>"; };
 		307F14B61E81F0E60076E60B /* PlaceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceProtocol.swift; path = Models/PlaceProtocol.swift; sourceTree = "<group>"; };
 		307F14B81E81F1030076E60B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Models/Place.swift; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		30C069F51E817F1B001C1A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30C069F71E817F1B001C1A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30F9CC871E8569E20090DB74 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		30F9CC891E8583600090DB74 /* LocationServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationServiceDelegate.swift; path = Services/LocationServiceDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +111,6 @@
 			children = (
 				3020DD071E848EA60036320C /* LocationServiceProtocol.swift */,
 				3020DD091E848ECE0036320C /* LocationService.swift */,
-				30F9CC891E8583600090DB74 /* LocationServiceDelegate.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -146,7 +147,7 @@
 				303024AF1E845D07008BDB05 /* Services */,
 				304ADB091E818ED2003E81D7 /* Extensions */,
 				30C06A001E817F71001C1A87 /* Data */,
-				30C069FF1E817F4B001C1A87 /* ViewControllers */,
+				30C069FF1E817F4B001C1A87 /* Controllers */,
 				30C069FE1E817F3E001C1A87 /* Models */,
 				30C069FD1E817F31001C1A87 /* Helpers */,
 				30C069EB1E817F1B001C1A87 /* AppDelegate.swift */,
@@ -180,18 +181,20 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		30C069FF1E817F4B001C1A87 /* ViewControllers */ = {
+		30C069FF1E817F4B001C1A87 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				300CB78B1E81C7C100C16FE2 /* HomeViewController.swift */,
 				300CB78D1E81C82A00C16FE2 /* NearbyViewController.swift */,
 			);
-			name = ViewControllers;
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		30C06A001E817F71001C1A87 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */,
+				306E44F51E872F3F004A7BDB /* PlaceData.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -344,17 +347,18 @@
 				307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */,
 				3020DD081E848EA60036320C /* LocationServiceProtocol.swift in Sources */,
 				30C069EC1E817F1B001C1A87 /* AppDelegate.swift in Sources */,
+				306E44F41E872F20004A7BDB /* PlaceDataProtocol.swift in Sources */,
 				307F14BF1E81F1670076E60B /* Location.swift in Sources */,
 				307F14BD1E81F14A0076E60B /* LocationProtocol.swift in Sources */,
 				300CB78C1E81C7C100C16FE2 /* HomeViewController.swift in Sources */,
 				307F14B91E81F1030076E60B /* Place.swift in Sources */,
+				306E44F61E872F3F004A7BDB /* PlaceData.swift in Sources */,
 				3020DD0C1E8497250036320C /* Constants.swift in Sources */,
 				300CB78E1E81C82A00C16FE2 /* NearbyViewController.swift in Sources */,
 				307F14B51E81F0950076E60B /* SwinjectStoryboardExtension.swift in Sources */,
 				3020DD141E849D990036320C /* LocationFactory.swift in Sources */,
 				307F14C31E81F1A60076E60B /* Requester.swift in Sources */,
 				3020DD0A1E848ECE0036320C /* LocationService.swift in Sources */,
-				30F9CC8A1E8583600090DB74 /* LocationServiceDelegate.swift in Sources */,
 				307F14C11E81F18A0076E60B /* Requesting.swift in Sources */,
 				3020DD121E849D810036320C /* LocationFactoryProtocol.swift in Sources */,
 			);

@@ -12,7 +12,7 @@
         <!--Nearby-->
         <scene sceneID="DMB-Xt-WA5">
             <objects>
-                <viewController id="IOX-4h-ctH" customClass="NearbyViewController" customModule="Meetup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nearbyPlacesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IOX-4h-ctH" customClass="NearbyViewController" customModule="Meetup" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5l2-Za-rEn"/>
                         <viewControllerLayoutGuide type="bottom" id="xTY-ud-qIp"/>
@@ -43,14 +43,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-25" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d5f-vI-gVf">
                                 <rect key="frame" x="0.0" y="64" width="414" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wc-fF-UV7">
-                                        <rect key="frame" x="18" y="8" width="378" height="75"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wc-fF-UV7">
+                                        <rect key="frame" x="18" y="8" width="378" height="75.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCz-qL-DxY">
-                                        <rect key="frame" x="18" y="37.333333333333321" width="378" height="74.666666666666686"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCz-qL-DxY">
+                                        <rect key="frame" x="18" y="37" width="378" height="75"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -67,34 +67,52 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="TTA-fW-fwH">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mm-oz-w9H">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mm-oz-w9H">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Restaurant"/>
+                                                <connections>
+                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="PhZ-3k-e3K"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih4-BH-Wja">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih4-BH-Wja">
                                                 <rect key="frame" x="138" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Cafe"/>
+                                                <connections>
+                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="TAZ-fN-yvh"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRE-2u-pGW">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRE-2u-pGW">
                                                 <rect key="frame" x="276" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Bar"/>
+                                                <connections>
+                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="GUW-w3-JJ5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="efH-8K-hww">
                                         <rect key="frame" x="0.0" y="75" width="414" height="75"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkd-eB-cJb">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkd-eB-cJb">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Casino"/>
+                                                <connections>
+                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="q0W-I6-aVu"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOP-hQ-BEX">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOP-hQ-BEX">
                                                 <rect key="frame" x="138" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Night club"/>
+                                                <connections>
+                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="UUg-vz-MfY"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgZ-wd-zKO">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgZ-wd-zKO">
                                                 <rect key="frame" x="276" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Other"/>
+                                                <connections>
+                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="egy-lA-fKE"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -262,4 +280,5 @@
         <image name="Near Me Filled-25" width="25" height="25"/>
         <image name="Near Me-25" width="25" height="25"/>
     </resources>
+    <color key="tintColor" red="1" green="0.38431372549999998" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

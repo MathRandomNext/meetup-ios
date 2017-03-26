@@ -13,15 +13,19 @@ public class LocationService: NSObject, LocationServiceProtocol, CLLocationManag
     
     public var delegate: LocationServiceDelegate?
     
-    private let locationManager = CLLocationManager()
+    private let locationManager: CLLocationManager = {
+        let _locationManager = CLLocationManager()
+        _locationManager.distanceFilter = CLLocationDistance(Constants.LocationOptions.Radius)
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        return _locationManager
+    }()
+    
     private var locationFactory: LocationFactoryProtocol!
     
     init(locationFactory: LocationFactoryProtocol) {
         super.init()
         self.locationFactory = locationFactory
         self.locationManager.delegate = self
-        self.locationManager.distanceFilter = CLLocationDistance(Constants.LocationOptions.Radius)
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
     }
@@ -66,5 +70,4 @@ public class LocationService: NSObject, LocationServiceProtocol, CLLocationManag
             callback(currentLocation)
         }
     }
-    
 }

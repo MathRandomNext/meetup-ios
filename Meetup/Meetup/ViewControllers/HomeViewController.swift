@@ -24,6 +24,16 @@ class HomeViewController: UIViewController, LocationServiceDelegate {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func onPlaceTypeButtonClick(_ sender: UIButton) {
+        let nearbyPlacesVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: Constants.ViewControllerIdentifiers.NearbyViewController)
+            as! NearbyViewController
+        
+        nearbyPlacesVC.placeType = PlaceType(rawValue: sender.tag)
+        
+        self.navigationController?.show(nearbyPlacesVC, sender: self)
+    }
+    
     func locationService(_ service: LocationServiceProtocol, didUpdateLocation location: LocationProtocol) {
         self.setTitle(location: location)
     }
@@ -73,5 +83,4 @@ class HomeViewController: UIViewController, LocationServiceDelegate {
         self.titleLabel.text = "Unknown location"
         self.subtitleLabel.text = nil
     }
-    
 }
