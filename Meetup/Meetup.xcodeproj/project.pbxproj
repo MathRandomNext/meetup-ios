@@ -23,7 +23,6 @@
 		3049DCDA1E88320C00054256 /* PlaceFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCD91E88320C00054256 /* PlaceFactoryProtocol.swift */; };
 		3049DCDC1E88322700054256 /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCDB1E88322700054256 /* PlaceFactory.swift */; };
 		3049DCDF1E883D1400054256 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCDD1E883D1400054256 /* Constants.swift */; };
-		3049DCE21E883D8600054256 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3049DCE11E883D8600054256 /* Info.plist */; };
 		306E44F41E872F20004A7BDB /* PlaceDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */; };
 		306E44F61E872F3F004A7BDB /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F51E872F3F004A7BDB /* PlaceData.swift */; };
 		307F14B51E81F0950076E60B /* Swinject+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B41E81F0950076E60B /* Swinject+Setup.swift */; };
@@ -313,7 +312,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3049DCE21E883D8600054256 /* Info.plist in Resources */,
 				30C069F61E817F1B001C1A87 /* LaunchScreen.storyboard in Resources */,
 				30C069F31E817F1B001C1A87 /* Assets.xcassets in Resources */,
 				30C069F11E817F1B001C1A87 /* Main.storyboard in Resources */,
