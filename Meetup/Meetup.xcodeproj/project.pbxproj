@@ -17,12 +17,13 @@
 		3020DD061E848D8D0036320C /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DD031E848D8D0036320C /* SwinjectStoryboard.framework */; };
 		3020DD081E848EA60036320C /* LocationServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD071E848EA60036320C /* LocationServiceProtocol.swift */; };
 		3020DD0A1E848ECE0036320C /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD091E848ECE0036320C /* LocationService.swift */; };
-		3020DD0C1E8497250036320C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD0B1E8497250036320C /* Constants.swift */; };
 		3020DD121E849D810036320C /* LocationFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD111E849D810036320C /* LocationFactoryProtocol.swift */; };
 		3020DD141E849D990036320C /* LocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD131E849D990036320C /* LocationFactory.swift */; };
 		3049DCD81E8828CA00054256 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCD71E8828CA00054256 /* API.swift */; };
 		3049DCDA1E88320C00054256 /* PlaceFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCD91E88320C00054256 /* PlaceFactoryProtocol.swift */; };
 		3049DCDC1E88322700054256 /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCDB1E88322700054256 /* PlaceFactory.swift */; };
+		3049DCDF1E883D1400054256 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCDD1E883D1400054256 /* Constants.swift */; };
+		3049DCE21E883D8600054256 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3049DCE11E883D8600054256 /* Info.plist */; };
 		306E44F41E872F20004A7BDB /* PlaceDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */; };
 		306E44F61E872F3F004A7BDB /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F51E872F3F004A7BDB /* PlaceData.swift */; };
 		307F14B51E81F0950076E60B /* Swinject+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B41E81F0950076E60B /* Swinject+Setup.swift */; };
@@ -56,12 +57,13 @@
 		3020DD031E848D8D0036320C /* SwinjectStoryboard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwinjectStoryboard.framework; path = "../../../Library/Developer/Xcode/DerivedData/Meetup-aogtlgfvhyfrxlgpqlbkhxovmowy/Build/Products/Debug-iphonesimulator/SwinjectStoryboard/SwinjectStoryboard.framework"; sourceTree = "<group>"; };
 		3020DD071E848EA60036320C /* LocationServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationServiceProtocol.swift; path = Services/LocationServiceProtocol.swift; sourceTree = "<group>"; };
 		3020DD091E848ECE0036320C /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationService.swift; path = Services/LocationService.swift; sourceTree = "<group>"; };
-		3020DD0B1E8497250036320C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3020DD111E849D810036320C /* LocationFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationFactoryProtocol.swift; path = Models/Factories/LocationFactoryProtocol.swift; sourceTree = "<group>"; };
 		3020DD131E849D990036320C /* LocationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationFactory.swift; path = Models/Factories/LocationFactory.swift; sourceTree = "<group>"; };
 		3049DCD71E8828CA00054256 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Config/API.swift; sourceTree = "<group>"; };
 		3049DCD91E88320C00054256 /* PlaceFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceFactoryProtocol.swift; path = Models/Factories/PlaceFactoryProtocol.swift; sourceTree = "<group>"; };
 		3049DCDB1E88322700054256 /* PlaceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceFactory.swift; path = Models/Factories/PlaceFactory.swift; sourceTree = "<group>"; };
+		3049DCDD1E883D1400054256 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Config/Constants.swift; sourceTree = "<group>"; };
+		3049DCE11E883D8600054256 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDataProtocol.swift; path = Data/PlaceDataProtocol.swift; sourceTree = "<group>"; };
 		306E44F51E872F3F004A7BDB /* PlaceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceData.swift; path = Data/PlaceData.swift; sourceTree = "<group>"; };
 		307F14B41E81F0950076E60B /* Swinject+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Swinject+Setup.swift"; path = "Extensions/Swinject+Setup.swift"; sourceTree = "<group>"; };
@@ -76,7 +78,6 @@
 		30C069F01E817F1B001C1A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30C069F21E817F1B001C1A87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30C069F51E817F1B001C1A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		30C069F71E817F1B001C1A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30DF6A091E8742370020D28D /* ResponseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseProtocol.swift; path = Helpers/ResponseProtocol.swift; sourceTree = "<group>"; };
 		30DF6A0B1E8742870020D28D /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Helpers/Response.swift; sourceTree = "<group>"; };
 		30DF6A0D1E8761CD0020D28D /* ResponseFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseFactoryProtocol.swift; path = Models/Factories/ResponseFactoryProtocol.swift; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 		3049DCD61E88283300054256 /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				3049DCDD1E883D1400054256 /* Constants.swift */,
 				307F14B41E81F0950076E60B /* Swinject+Setup.swift */,
 				3049DCD71E8828CA00054256 /* API.swift */,
 			);
@@ -179,10 +181,9 @@
 				30C069FD1E817F31001C1A87 /* Helpers */,
 				30C069EB1E817F1B001C1A87 /* AppDelegate.swift */,
 				30C069EF1E817F1B001C1A87 /* Main.storyboard */,
+				3049DCE11E883D8600054256 /* Info.plist */,
 				30C069F21E817F1B001C1A87 /* Assets.xcassets */,
 				30C069F41E817F1B001C1A87 /* LaunchScreen.storyboard */,
-				30C069F71E817F1B001C1A87 /* Info.plist */,
-				3020DD0B1E8497250036320C /* Constants.swift */,
 			);
 			path = Meetup;
 			sourceTree = "<group>";
@@ -312,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3049DCE21E883D8600054256 /* Info.plist in Resources */,
 				30C069F61E817F1B001C1A87 /* LaunchScreen.storyboard in Resources */,
 				30C069F31E817F1B001C1A87 /* Assets.xcassets in Resources */,
 				30C069F11E817F1B001C1A87 /* Main.storyboard in Resources */,
@@ -373,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3049DCDF1E883D1400054256 /* Constants.swift in Sources */,
 				3049DCD81E8828CA00054256 /* API.swift in Sources */,
 				30DF6A0A1E8742370020D28D /* ResponseProtocol.swift in Sources */,
 				3049DCDC1E88322700054256 /* PlaceFactory.swift in Sources */,
@@ -389,7 +392,6 @@
 				300CB78C1E81C7C100C16FE2 /* HomeViewController.swift in Sources */,
 				307F14B91E81F1030076E60B /* Place.swift in Sources */,
 				306E44F61E872F3F004A7BDB /* PlaceData.swift in Sources */,
-				3020DD0C1E8497250036320C /* Constants.swift in Sources */,
 				300CB78E1E81C82A00C16FE2 /* NearbyViewController.swift in Sources */,
 				307F14B51E81F0950076E60B /* Swinject+Setup.swift in Sources */,
 				3020DD141E849D990036320C /* LocationFactory.swift in Sources */,
