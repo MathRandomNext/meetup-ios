@@ -38,7 +38,7 @@ class HomeViewController: UIViewController, LocationServiceDelegate {
             .getNearby(latitude: 42.692923, longitude: 23.320057)
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
             .observeOn(MainScheduler.instance)
-            .subscribe()
+            .subscribe(onNext: { print("-------\($0.name)") })
             .disposed(by: disposeBag)
     }
     

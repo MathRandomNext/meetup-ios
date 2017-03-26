@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 import RxSwift
 
-public class PlaceData {
+public class PlaceData: PlaceDataProtocol {
     
     private let requester: RequesterProcol
     private let placeFactory: PlaceFactoryProtocol
@@ -38,13 +38,19 @@ public class PlaceData {
         return self.requester
             .get(nearbyPlacesUrl)
             .filter { $0.body != nil }
-            .map { JSON($0.body!) }
-            .map({ responseJSON in
-                print(responseJSON)
-                let results = responseJSON["results"]
+            .flatMap { Observable.from(JSON($0.body!)["results"].arrayValue) }
+            .map { placeJSON in
+                let id = placeJSON["place_id"].stringValue
+                let name = placeJSON["name"].stringValue
+                let address = placeJSON["vicinity"].string
+                let types = placeJSON["types"].arrayValue.map { "\($0)" }
+                let rating = placeJSON["rating"].float
                 
-                return Place()
-            })
+                return self.placeFactory
+                    .createPlace(id: id, name: name, address: address, types: types, rating: rating)
+            }
+            .filter { $0 != nil }
+            .map { $0! }
     }
     
     private lazy var placeTypeQueryString: [PlaceType: String] = {

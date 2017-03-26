@@ -8,6 +8,13 @@
 
 public protocol PlaceProtocol {
     
+    var id: String { get set }
+    var name: String { get set }
+    var address: String? { get set }
+    var types: [String]? { get set }
+    var rating: Float? { get set }
+    var photoUrl: String? { get set }
+    
 }
 
 public enum PlaceType: Int {
