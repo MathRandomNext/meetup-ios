@@ -71,21 +71,21 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Restaurant"/>
                                                 <connections>
-                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="PhZ-3k-e3K"/>
+                                                    <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="OQX-xy-glK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih4-BH-Wja">
                                                 <rect key="frame" x="138" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Cafe"/>
                                                 <connections>
-                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="TAZ-fN-yvh"/>
+                                                    <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="d2I-gX-i9C"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRE-2u-pGW">
                                                 <rect key="frame" x="276" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Bar"/>
                                                 <connections>
-                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="GUW-w3-JJ5"/>
+                                                    <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="djS-xK-C1d"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -97,21 +97,21 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Casino"/>
                                                 <connections>
-                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="q0W-I6-aVu"/>
+                                                    <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="hFy-QY-Hd8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOP-hQ-BEX">
                                                 <rect key="frame" x="138" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Night club"/>
                                                 <connections>
-                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="UUg-vz-MfY"/>
+                                                    <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="bI4-ww-DJR"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgZ-wd-zKO">
                                                 <rect key="frame" x="276" y="0.0" width="138" height="75"/>
                                                 <state key="normal" title="Other"/>
                                                 <connections>
-                                                    <action selector="onPlaceTypeButtonClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="egy-lA-fKE"/>
+                                                    <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="6ca-dI-pfH"/>
                                                 </connections>
                                             </button>
                                         </subviews>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomeViewController: UIViewController, LocationServiceDelegate {
     
@@ -15,21 +16,37 @@ class HomeViewController: UIViewController, LocationServiceDelegate {
     
     var locationService: LocationServiceProtocol!
     
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.locationService.delegate = self
         
-        Requester(responseFactory: ResponseFactory()).get("https://telerik-meetup.herokuapp.com/user/ilievv")
-            .subscribe { response in
-                print(response)
-        }
+//        Requester(responseFactory: ResponseFactory())
+//            .get("https://telerik-meetup.herokuapp.com/user/ilievv")
+//            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
+//            .observeOn(MainScheduler.instance)
+//            .subscribe(onNext:  { res in
+//                print(res)
+//            }, onError: { error in
+//                print(error)
+//            }, onDisposed: {
+//                print("disposed")
+//            }).disposed(by: disposeBag)
+        
+        PlaceData(requester: Requester(responseFactory: ResponseFactory()), placeFactory: PlaceFactory())
+            .getNearby(latitude: 42.692923, longitude: 23.320057)
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
+            .observeOn(MainScheduler.instance)
+            .subscribe()
+            .disposed(by: disposeBag)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func onPlaceTypeButtonClick(_ sender: UIButton) {
+    @IBAction func onNavigationMenuItemClick(_ sender: UIButton) {
         let nearbyPlacesVC = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: Constants.ViewControllerIdentifiers.NearbyViewController)
             as! NearbyViewController

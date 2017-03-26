@@ -29,5 +29,4 @@ public struct Location: LocationProtocol {
         self.thoroughfare = thoroughfare
         self.subThoroughfare = subThoroughfare
     }
-    
 }

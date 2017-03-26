@@ -20,9 +20,12 @@
 		3020DD0C1E8497250036320C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD0B1E8497250036320C /* Constants.swift */; };
 		3020DD121E849D810036320C /* LocationFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD111E849D810036320C /* LocationFactoryProtocol.swift */; };
 		3020DD141E849D990036320C /* LocationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3020DD131E849D990036320C /* LocationFactory.swift */; };
+		3049DCD81E8828CA00054256 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCD71E8828CA00054256 /* API.swift */; };
+		3049DCDA1E88320C00054256 /* PlaceFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCD91E88320C00054256 /* PlaceFactoryProtocol.swift */; };
+		3049DCDC1E88322700054256 /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCDB1E88322700054256 /* PlaceFactory.swift */; };
 		306E44F41E872F20004A7BDB /* PlaceDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */; };
 		306E44F61E872F3F004A7BDB /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F51E872F3F004A7BDB /* PlaceData.swift */; };
-		307F14B51E81F0950076E60B /* SwinjectStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B41E81F0950076E60B /* SwinjectStoryboardExtension.swift */; };
+		307F14B51E81F0950076E60B /* Swinject+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B41E81F0950076E60B /* Swinject+Setup.swift */; };
 		307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B61E81F0E60076E60B /* PlaceProtocol.swift */; };
 		307F14B91E81F1030076E60B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B81E81F1030076E60B /* Place.swift */; };
 		307F14BD1E81F14A0076E60B /* LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14BC1E81F14A0076E60B /* LocationProtocol.swift */; };
@@ -56,9 +59,12 @@
 		3020DD0B1E8497250036320C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3020DD111E849D810036320C /* LocationFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationFactoryProtocol.swift; path = Models/Factories/LocationFactoryProtocol.swift; sourceTree = "<group>"; };
 		3020DD131E849D990036320C /* LocationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationFactory.swift; path = Models/Factories/LocationFactory.swift; sourceTree = "<group>"; };
+		3049DCD71E8828CA00054256 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Config/API.swift; sourceTree = "<group>"; };
+		3049DCD91E88320C00054256 /* PlaceFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceFactoryProtocol.swift; path = Models/Factories/PlaceFactoryProtocol.swift; sourceTree = "<group>"; };
+		3049DCDB1E88322700054256 /* PlaceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceFactory.swift; path = Models/Factories/PlaceFactory.swift; sourceTree = "<group>"; };
 		306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDataProtocol.swift; path = Data/PlaceDataProtocol.swift; sourceTree = "<group>"; };
 		306E44F51E872F3F004A7BDB /* PlaceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceData.swift; path = Data/PlaceData.swift; sourceTree = "<group>"; };
-		307F14B41E81F0950076E60B /* SwinjectStoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwinjectStoryboardExtension.swift; path = Extensions/SwinjectStoryboardExtension.swift; sourceTree = "<group>"; };
+		307F14B41E81F0950076E60B /* Swinject+Setup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Swinject+Setup.swift"; path = "Extensions/Swinject+Setup.swift"; sourceTree = "<group>"; };
 		307F14B61E81F0E60076E60B /* PlaceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceProtocol.swift; path = Models/PlaceProtocol.swift; sourceTree = "<group>"; };
 		307F14B81E81F1030076E60B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Models/Place.swift; sourceTree = "<group>"; };
 		307F14BC1E81F14A0076E60B /* LocationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationProtocol.swift; path = Models/LocationProtocol.swift; sourceTree = "<group>"; };
@@ -112,6 +118,8 @@
 				3020DD131E849D990036320C /* LocationFactory.swift */,
 				30DF6A0D1E8761CD0020D28D /* ResponseFactoryProtocol.swift */,
 				30DF6A0F1E8761F70020D28D /* ResponseFactory.swift */,
+				3049DCD91E88320C00054256 /* PlaceFactoryProtocol.swift */,
+				3049DCDB1E88322700054256 /* PlaceFactory.swift */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -125,10 +133,18 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		3049DCD61E88283300054256 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				307F14B41E81F0950076E60B /* Swinject+Setup.swift */,
+				3049DCD71E8828CA00054256 /* API.swift */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
 		304ADB091E818ED2003E81D7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				307F14B41E81F0950076E60B /* SwinjectStoryboardExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -154,6 +170,7 @@
 		30C069EA1E817F1B001C1A87 /* Meetup */ = {
 			isa = PBXGroup;
 			children = (
+				3049DCD61E88283300054256 /* Config */,
 				303024AF1E845D07008BDB05 /* Services */,
 				304ADB091E818ED2003E81D7 /* Extensions */,
 				30C06A001E817F71001C1A87 /* Data */,
@@ -356,7 +373,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3049DCD81E8828CA00054256 /* API.swift in Sources */,
 				30DF6A0A1E8742370020D28D /* ResponseProtocol.swift in Sources */,
+				3049DCDC1E88322700054256 /* PlaceFactory.swift in Sources */,
+				3049DCDA1E88320C00054256 /* PlaceFactoryProtocol.swift in Sources */,
 				307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */,
 				3020DD081E848EA60036320C /* LocationServiceProtocol.swift in Sources */,
 				30C069EC1E817F1B001C1A87 /* AppDelegate.swift in Sources */,
@@ -371,7 +391,7 @@
 				306E44F61E872F3F004A7BDB /* PlaceData.swift in Sources */,
 				3020DD0C1E8497250036320C /* Constants.swift in Sources */,
 				300CB78E1E81C82A00C16FE2 /* NearbyViewController.swift in Sources */,
-				307F14B51E81F0950076E60B /* SwinjectStoryboardExtension.swift in Sources */,
+				307F14B51E81F0950076E60B /* Swinject+Setup.swift in Sources */,
 				3020DD141E849D990036320C /* LocationFactory.swift in Sources */,
 				307F14C31E81F1A60076E60B /* Requester.swift in Sources */,
 				3020DD0A1E848ECE0036320C /* LocationService.swift in Sources */,
