@@ -18,6 +18,11 @@ class HomeViewController: UIViewController, LocationServiceDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.locationService.delegate = self
+        
+        Requester(responseFactory: ResponseFactory()).get("https://telerik-meetup.herokuapp.com/user/ilievv")
+            .subscribe { response in
+                print(response)
+        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -14,7 +14,7 @@ public class PlaceData {
         return [PlaceProtocol]()
     }
     
-    private lazy var placeTypeQueryString: [PlaceType:String] = {
+    private lazy var placeTypeQueryString: [PlaceType: String] = {
         return [
             PlaceType.restaurant: "restaurant",
             PlaceType.cafe: "cafe",

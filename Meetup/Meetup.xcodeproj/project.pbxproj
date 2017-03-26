@@ -27,12 +27,16 @@
 		307F14B91E81F1030076E60B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B81E81F1030076E60B /* Place.swift */; };
 		307F14BD1E81F14A0076E60B /* LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14BC1E81F14A0076E60B /* LocationProtocol.swift */; };
 		307F14BF1E81F1670076E60B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14BE1E81F1670076E60B /* Location.swift */; };
-		307F14C11E81F18A0076E60B /* Requesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14C01E81F18A0076E60B /* Requesting.swift */; };
+		307F14C11E81F18A0076E60B /* RequesterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14C01E81F18A0076E60B /* RequesterProtocol.swift */; };
 		307F14C31E81F1A60076E60B /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14C21E81F1A60076E60B /* Requester.swift */; };
 		30C069EC1E817F1B001C1A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C069EB1E817F1B001C1A87 /* AppDelegate.swift */; };
 		30C069F11E817F1B001C1A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C069EF1E817F1B001C1A87 /* Main.storyboard */; };
 		30C069F31E817F1B001C1A87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C069F21E817F1B001C1A87 /* Assets.xcassets */; };
 		30C069F61E817F1B001C1A87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C069F41E817F1B001C1A87 /* LaunchScreen.storyboard */; };
+		30DF6A0A1E8742370020D28D /* ResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DF6A091E8742370020D28D /* ResponseProtocol.swift */; };
+		30DF6A0C1E8742870020D28D /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DF6A0B1E8742870020D28D /* Response.swift */; };
+		30DF6A0E1E8761CD0020D28D /* ResponseFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DF6A0D1E8761CD0020D28D /* ResponseFactoryProtocol.swift */; };
+		30DF6A101E8761F70020D28D /* ResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DF6A0F1E8761F70020D28D /* ResponseFactory.swift */; };
 		30F9CC881E8569E20090DB74 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F9CC871E8569E20090DB74 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +63,7 @@
 		307F14B81E81F1030076E60B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Models/Place.swift; sourceTree = "<group>"; };
 		307F14BC1E81F14A0076E60B /* LocationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationProtocol.swift; path = Models/LocationProtocol.swift; sourceTree = "<group>"; };
 		307F14BE1E81F1670076E60B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
-		307F14C01E81F18A0076E60B /* Requesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requesting.swift; path = Helpers/Requesting.swift; sourceTree = "<group>"; };
+		307F14C01E81F18A0076E60B /* RequesterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequesterProtocol.swift; path = Helpers/RequesterProtocol.swift; sourceTree = "<group>"; };
 		307F14C21E81F1A60076E60B /* Requester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requester.swift; path = Helpers/Requester.swift; sourceTree = "<group>"; };
 		30C069E81E817F1B001C1A87 /* Meetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C069EB1E817F1B001C1A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,10 @@
 		30C069F21E817F1B001C1A87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30C069F51E817F1B001C1A87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30C069F71E817F1B001C1A87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30DF6A091E8742370020D28D /* ResponseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseProtocol.swift; path = Helpers/ResponseProtocol.swift; sourceTree = "<group>"; };
+		30DF6A0B1E8742870020D28D /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Helpers/Response.swift; sourceTree = "<group>"; };
+		30DF6A0D1E8761CD0020D28D /* ResponseFactoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseFactoryProtocol.swift; path = Models/Factories/ResponseFactoryProtocol.swift; sourceTree = "<group>"; };
+		30DF6A0F1E8761F70020D28D /* ResponseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseFactory.swift; path = Models/Factories/ResponseFactory.swift; sourceTree = "<group>"; };
 		30F9CC871E8569E20090DB74 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -102,6 +110,8 @@
 			children = (
 				3020DD111E849D810036320C /* LocationFactoryProtocol.swift */,
 				3020DD131E849D990036320C /* LocationFactory.swift */,
+				30DF6A0D1E8761CD0020D28D /* ResponseFactoryProtocol.swift */,
+				30DF6A0F1E8761F70020D28D /* ResponseFactory.swift */,
 			);
 			name = Factories;
 			sourceTree = "<group>";
@@ -163,7 +173,7 @@
 		30C069FD1E817F31001C1A87 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				307F14C01E81F18A0076E60B /* Requesting.swift */,
+				307F14C01E81F18A0076E60B /* RequesterProtocol.swift */,
 				307F14C21E81F1A60076E60B /* Requester.swift */,
 			);
 			name = Helpers;
@@ -173,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				3020DD101E849D630036320C /* Factories */,
+				30DF6A091E8742370020D28D /* ResponseProtocol.swift */,
+				30DF6A0B1E8742870020D28D /* Response.swift */,
 				307F14B61E81F0E60076E60B /* PlaceProtocol.swift */,
 				307F14B81E81F1030076E60B /* Place.swift */,
 				307F14BC1E81F14A0076E60B /* LocationProtocol.swift */,
@@ -344,10 +356,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DF6A0A1E8742370020D28D /* ResponseProtocol.swift in Sources */,
 				307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */,
 				3020DD081E848EA60036320C /* LocationServiceProtocol.swift in Sources */,
 				30C069EC1E817F1B001C1A87 /* AppDelegate.swift in Sources */,
 				306E44F41E872F20004A7BDB /* PlaceDataProtocol.swift in Sources */,
+				30DF6A0E1E8761CD0020D28D /* ResponseFactoryProtocol.swift in Sources */,
+				30DF6A101E8761F70020D28D /* ResponseFactory.swift in Sources */,
+				30DF6A0C1E8742870020D28D /* Response.swift in Sources */,
 				307F14BF1E81F1670076E60B /* Location.swift in Sources */,
 				307F14BD1E81F14A0076E60B /* LocationProtocol.swift in Sources */,
 				300CB78C1E81C7C100C16FE2 /* HomeViewController.swift in Sources */,
@@ -359,7 +375,7 @@
 				3020DD141E849D990036320C /* LocationFactory.swift in Sources */,
 				307F14C31E81F1A60076E60B /* Requester.swift in Sources */,
 				3020DD0A1E848ECE0036320C /* LocationService.swift in Sources */,
-				307F14C11E81F18A0076E60B /* Requesting.swift in Sources */,
+				307F14C11E81F18A0076E60B /* RequesterProtocol.swift in Sources */,
 				3020DD121E849D810036320C /* LocationFactoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

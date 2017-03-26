@@ -17,11 +17,15 @@ extension SwinjectStoryboard {
             c.locationService = r.resolve(LocationServiceProtocol.self)
         }
         
-        defaultContainer.register(Requesting.self) { _ in Requester() }
+        defaultContainer.register(RequesterProcol.self) { r in
+            Requester(responseFactory: r.resolve(ResponseFactoryProtocol.self)!)
+        }
+        
         defaultContainer.register(LocationServiceProtocol.self) { r in
             LocationService(locationFactory: r.resolve(LocationFactoryProtocol.self)!)
         }
         
+        defaultContainer.register(ResponseFactoryProtocol.self) { _ in ResponseFactory() }
         defaultContainer.register(LocationFactoryProtocol.self) { _ in LocationFactory() }
     }
 }

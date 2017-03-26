@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import RxSwift
 
-public protocol Requesting {
+public protocol RequesterProcol {
+    
+    func get(_ url: String) -> Observable<ResponseProtocol>
     
 }

@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.4.0)
+  - RxCocoa (3.3.1):
+    - RxSwift (~> 3.3)
+  - RxSwift (3.3.1)
   - SwiftyJSON (3.1.4)
   - Swinject (2.0.0)
   - SwinjectStoryboard (1.0.0):
@@ -7,16 +10,20 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - RxCocoa (~> 3.0)
+  - RxSwift (~> 3.0)
   - SwiftyJSON
   - Swinject
   - SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
+  RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
   SwinjectStoryboard: 8e0d3c0202b64172bdf915d55e8dc83d9c4e7863
 
-PODFILE CHECKSUM: aefb0821d07fc9d1a950e7e40293b921b1c203b9
+PODFILE CHECKSUM: 6d347ec4dbedbf537102c8ef791e8d4c2b4256d9
 
 COCOAPODS: 1.2.0
