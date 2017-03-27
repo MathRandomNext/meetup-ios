@@ -18,10 +18,11 @@ public final class API {
     public static func nearbySearchUrl(latitude: Double,
                                        longitude: Double,
                                        radius: Int = Constants.LocationOptions.Radius,
-                                       placeType: String? = nil) -> String {
-        
+                                       placeType: String? = nil) -> String
+    {
         var url = "\(urlNearbyVenues)?location=\(latitude),\(longitude)&radius=\(radius)&key=\(googleApiKey)"
-        if let placeType = placeType {
+        if let placeType = placeType
+        {
             url.append("&type=\(placeType)")
         }
         return url

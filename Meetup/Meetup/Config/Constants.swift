@@ -8,13 +8,15 @@
 
 import Foundation
 
-public struct Constants {
-    
-    struct ViewControllerIdentifiers {
+public struct Constants
+{
+    struct ViewControllerIdentifiers
+    {
         static let NearbyViewController = "nearbyPlacesVC"
     }
     
-    struct LocationOptions {
+    struct LocationOptions
+    {
         static let Radius = 50
     }
 }

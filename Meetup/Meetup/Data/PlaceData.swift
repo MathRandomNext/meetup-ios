@@ -10,12 +10,13 @@ import Foundation
 import SwiftyJSON
 import RxSwift
 
-public class PlaceData: PlaceDataProtocol {
-    
+public class PlaceData: PlaceDataProtocol
+{
     private let requester: RequesterProcol
     private let placeFactory: PlaceFactoryProtocol
     
-    init(requester: RequesterProcol, placeFactory: PlaceFactoryProtocol) {
+    init(requester: RequesterProcol, placeFactory: PlaceFactoryProtocol)
+    {
         self.requester = requester
         self.placeFactory = placeFactory
     }
@@ -23,15 +24,19 @@ public class PlaceData: PlaceDataProtocol {
     public func getNearby(latitude: Double,
                           longitude: Double,
                           radius: Int = Constants.LocationOptions.Radius,
-                          placeType: PlaceType? = nil) -> Observable<PlaceProtocol> {
-        
+                          placeType: PlaceType? = nil)
+        -> Observable<PlaceProtocol>
+    {
         var nearbyPlacesUrl: String!
-        if let placeType = placeType {
+        if let placeType = placeType
+        {
             nearbyPlacesUrl = API.nearbySearchUrl(latitude: latitude,
                                                   longitude: longitude,
                                                   radius: radius,
                                                   placeType: placeTypeQueryString[placeType])
-        } else {
+        }
+        else
+        {
             nearbyPlacesUrl = API.nearbySearchUrl(latitude: latitude, longitude: longitude, radius: radius)
         }
         
@@ -53,7 +58,8 @@ public class PlaceData: PlaceDataProtocol {
             .map { $0! }
     }
     
-    private lazy var placeTypeQueryString: [PlaceType: String] = {
+    private lazy var placeTypeQueryString: [PlaceType: String] =
+    {
         return [
             PlaceType.restaurant: "restaurant",
             PlaceType.cafe: "cafe",

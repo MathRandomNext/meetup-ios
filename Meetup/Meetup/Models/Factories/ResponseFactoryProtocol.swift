@@ -8,8 +8,7 @@
 
 import Foundation
 
-public protocol ResponseFactoryProtocol {
-    
+public protocol ResponseFactoryProtocol
+{
     func createResponse() -> ResponseProtocol
-    
 }

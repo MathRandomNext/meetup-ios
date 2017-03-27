@@ -6,8 +6,8 @@
 //  Copyright © 2017 Iliyan Kupenov. All rights reserved.
 //
 
-public struct Location: LocationProtocol {
-    
+public struct Location: LocationProtocol
+{
     public var latitude: Double
     public var longitude: Double
     public var name: String?
@@ -20,8 +20,8 @@ public struct Location: LocationProtocol {
          name: String? = nil,
          locality: String? = nil,
          thoroughfare: String? = nil,
-         subThoroughfare: String? = nil) {
-        
+         subThoroughfare: String? = nil)
+    {
         self.latitude = latitude
         self.longitude = longitude
         self.name = name

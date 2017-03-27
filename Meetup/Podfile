@@ -9,4 +9,6 @@ target 'Meetup' do
   pod 'SwiftyJSON'
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
+  pod 'Cosmos',     '~> 8.0'
+  pod 'SVProgressHUD'
 end

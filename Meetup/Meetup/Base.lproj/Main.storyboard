@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Nearby-->
         <scene sceneID="DMB-Xt-WA5">
             <objects>
-                <viewController storyboardIdentifier="nearbyPlacesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IOX-4h-ctH" customClass="NearbyViewController" customModule="Meetup" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nearbyPlacesVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IOX-4h-ctH" customClass="NearbyViewController" customModule="Meetup" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5l2-Za-rEn"/>
                         <viewControllerLayoutGuide type="bottom" id="xTY-ud-qIp"/>
@@ -20,9 +21,111 @@
                     <view key="view" contentMode="scaleToFill" id="utB-WY-0ZH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="us5-D7-QUP">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="placeTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceTableViewCell" id="TIL-ul-qLO" customClass="PlaceTableViewCell" customModule="Meetup" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TIL-ul-qLO" id="ksR-3b-Cqo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gma-QL-6K4" customClass="CosmosView" customModule="Cosmos">
+                                                    <rect key="frame" x="311" y="8" width="95" height="15"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="15" id="Ck2-Z7-toG"/>
+                                                        <constraint firstAttribute="width" constant="95" id="iYh-et-vyn"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="totalStars">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="updateOnTouch" value="NO"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                            <color key="value" red="1" green="0.38431372549999998" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                            <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="emptyColor">
+                                                            <color key="value" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="emptyBorderWidth">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                            <color key="value" red="1" green="0.38431372549999998" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="reD-eB-NtQ">
+                                                    <rect key="frame" x="8" y="8" width="280" height="63.666666666666671"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thp-bX-ieR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="280" height="26.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHh-jt-1bR">
+                                                            <rect key="frame" x="0.0" y="26.333333333333336" width="280" height="19.333333333333329"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dum-gF-k8S">
+                                                            <rect key="frame" x="0.0" y="45.666666666666671" width="280" height="18.000000000000007"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="280" id="Kdz-Jc-FY7"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="reD-eB-NtQ" firstAttribute="bottom" secondItem="ksR-3b-Cqo" secondAttribute="bottomMargin" id="1Js-fi-f85"/>
+                                                <constraint firstItem="gma-QL-6K4" firstAttribute="trailing" secondItem="ksR-3b-Cqo" secondAttribute="trailingMargin" id="U2b-p8-DXg"/>
+                                                <constraint firstItem="gma-QL-6K4" firstAttribute="top" secondItem="ksR-3b-Cqo" secondAttribute="topMargin" id="cKm-v1-RfM"/>
+                                                <constraint firstItem="reD-eB-NtQ" firstAttribute="top" secondItem="ksR-3b-Cqo" secondAttribute="topMargin" id="d2s-3O-f9r"/>
+                                                <constraint firstItem="reD-eB-NtQ" firstAttribute="leading" secondItem="ksR-3b-Cqo" secondAttribute="leadingMargin" id="oHs-KO-M9b"/>
+                                                <constraint firstItem="gma-QL-6K4" firstAttribute="trailing" secondItem="ksR-3b-Cqo" secondAttribute="trailingMargin" id="tq3-Rc-FAD"/>
+                                                <constraint firstItem="gma-QL-6K4" firstAttribute="top" secondItem="ksR-3b-Cqo" secondAttribute="topMargin" id="yc6-10-hft"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="placeAddress" destination="dum-gF-k8S" id="hz9-er-YR5"/>
+                                            <outlet property="placeRating" destination="gma-QL-6K4" id="1of-Wp-MP4"/>
+                                            <outlet property="placeTitle" destination="thp-bX-ieR" id="jFe-SL-0I4"/>
+                                            <outlet property="placeTypes" destination="EHh-jt-1bR" id="gGG-rp-RtU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="us5-D7-QUP" firstAttribute="leading" secondItem="utB-WY-0ZH" secondAttribute="leading" id="YAM-8a-lk7"/>
+                            <constraint firstItem="us5-D7-QUP" firstAttribute="top" secondItem="5l2-Za-rEn" secondAttribute="bottom" id="aPK-hn-i9a"/>
+                            <constraint firstAttribute="trailing" secondItem="us5-D7-QUP" secondAttribute="trailing" id="dZa-k4-2xo"/>
+                            <constraint firstItem="xTY-ud-qIp" firstAttribute="top" secondItem="us5-D7-QUP" secondAttribute="bottom" id="y1L-Jd-hBO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Nearby" id="JZ7-Zi-dYo"/>
+                    <connections>
+                        <outlet property="nearbyPlacesTableView" destination="us5-D7-QUP" id="xWD-cM-Pei"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EbF-G3-Aac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,21 +172,30 @@
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mm-oz-w9H">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="75"/>
-                                                <state key="normal" title="Restaurant"/>
+                                                <state key="normal" title="Restaurant">
+                                                    <color key="titleColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="OQX-xy-glK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih4-BH-Wja">
                                                 <rect key="frame" x="138" y="0.0" width="138" height="75"/>
-                                                <state key="normal" title="Cafe"/>
+                                                <state key="normal" title="Cafe">
+                                                    <color key="titleColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="d2I-gX-i9C"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRE-2u-pGW">
                                                 <rect key="frame" x="276" y="0.0" width="138" height="75"/>
-                                                <state key="normal" title="Bar"/>
+                                                <state key="normal" title="Bar">
+                                                    <color key="titleColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="djS-xK-C1d"/>
                                                 </connections>
@@ -95,21 +207,30 @@
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkd-eB-cJb">
                                                 <rect key="frame" x="0.0" y="0.0" width="138" height="75"/>
-                                                <state key="normal" title="Casino"/>
+                                                <state key="normal" title="Casino">
+                                                    <color key="titleColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="hFy-QY-Hd8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOP-hQ-BEX">
                                                 <rect key="frame" x="138" y="0.0" width="138" height="75"/>
-                                                <state key="normal" title="Night club"/>
+                                                <state key="normal" title="Night club">
+                                                    <color key="titleColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="bI4-ww-DJR"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgZ-wd-zKO">
                                                 <rect key="frame" x="276" y="0.0" width="138" height="75"/>
-                                                <state key="normal" title="Other"/>
+                                                <state key="normal" title="Other">
+                                                    <color key="titleColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleShadowColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="onNavigationMenuItemClick:" destination="FzA-bH-Sth" eventType="touchUpInside" id="6ca-dI-pfH"/>
                                                 </connections>

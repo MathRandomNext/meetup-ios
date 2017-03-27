@@ -8,26 +8,27 @@
 
 import Foundation
 
-public protocol LocationFactoryProtocol {
-    
+public protocol LocationFactoryProtocol
+{
     func createLocation(latitude: Double,
                         longitude: Double,
                         name: String?,
                         locality: String?,
                         thoroughfare: String?,
-                        subThoroughfare: String?) -> LocationProtocol
-    
+                        subThoroughfare: String?)
+        -> LocationProtocol
 }
 
-extension LocationFactoryProtocol {
-    
+extension LocationFactoryProtocol
+{
     func createLocation(latitude: Double,
                         longitude: Double,
                         name: String? = nil,
                         locality: String? = nil,
                         thoroughfare: String? = nil,
-                        subThoroughfare: String? = nil) -> LocationProtocol {
-        
+                        subThoroughfare: String? = nil)
+        -> LocationProtocol
+    {
         return createLocation(latitude: latitude,
                               longitude: longitude,
                               name: name,
@@ -35,5 +36,4 @@ extension LocationFactoryProtocol {
                               thoroughfare: thoroughfare,
                               subThoroughfare: subThoroughfare)
     }
-    
 }

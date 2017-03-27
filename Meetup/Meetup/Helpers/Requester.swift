@@ -10,15 +10,17 @@ import Foundation
 import Alamofire
 import RxSwift
 
-public class Requester: RequesterProcol {
-    
+public class Requester: RequesterProcol
+{
     private let responseFactory: ResponseFactoryProtocol
     
-    init(responseFactory: ResponseFactoryProtocol) {
+    init(responseFactory: ResponseFactoryProtocol)
+    {
         self.responseFactory = responseFactory
     }
     
-    public func get(_ url: String) -> Observable<ResponseProtocol> {
+    public func get(_ url: String) -> Observable<ResponseProtocol>
+    {
         return Observable.create { observer in
             Alamofire.request(url)
                 .validate()
@@ -29,7 +31,8 @@ public class Requester: RequesterProcol {
                     responseResult.statusCode = secondaryResponse?.statusCode
                     responseResult.headers = secondaryResponse?.allHeaderFields as? [String: Any]
                     
-                    switch response.result {
+                    switch response.result
+                    {
                     case .success(let value):
                         responseResult.body = value as? [String: Any]
                         observer.onNext(responseResult)
