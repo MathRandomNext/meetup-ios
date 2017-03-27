@@ -20,5 +20,4 @@ extension PlaceDataProtocol
     {
         return getNearby(latitude: latitude, longitude: longitude, radius: radius, placeType: placeType)
     }
-    
 }
