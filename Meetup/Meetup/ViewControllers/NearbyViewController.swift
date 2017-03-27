@@ -79,6 +79,28 @@ class NearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         return placeCell
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        var numOfSections = 0
+        
+        if !self.nearbyPlaces.isEmpty
+        {
+            tableView.separatorStyle = .singleLine
+            numOfSections = 1
+            tableView.backgroundView = nil
+        }
+        else
+        {
+            let noDataLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            noDataLabel.text = "No data available"
+            noDataLabel.textColor = UIColor.darkGray
+            noDataLabel.textAlignment = .center
+            tableView.backgroundView = noDataLabel
+            tableView.separatorStyle = .none
+        }
+        
+        return numOfSections
+    }
 }
 
 class PlaceTableViewCell: UITableViewCell
