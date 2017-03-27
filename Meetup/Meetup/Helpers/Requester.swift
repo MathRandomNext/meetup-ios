@@ -21,7 +21,8 @@ public class Requester: RequesterProcol
     
     public func get(_ url: String) -> Observable<ResponseProtocol>
     {
-        return Observable.create { observer in
+        return Observable.create
+        { observer in
             Alamofire.request(url)
                 .validate()
                 .responseJSON { response in

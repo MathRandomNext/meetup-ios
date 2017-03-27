@@ -145,13 +145,6 @@
 			name = Config;
 			sourceTree = "<group>";
 		};
-		304ADB091E818ED2003E81D7 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
 		30C069DF1E817F1B001C1A87 = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +169,6 @@
 				30D774F01E88961900603765 /* Extensions */,
 				3049DCD61E88283300054256 /* Config */,
 				303024AF1E845D07008BDB05 /* Services */,
-				304ADB091E818ED2003E81D7 /* Extensions */,
 				30C06A001E817F71001C1A87 /* Data */,
 				30C069FF1E817F4B001C1A87 /* Controllers */,
 				30C069FE1E817F3E001C1A87 /* Models */,
