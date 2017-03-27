@@ -6,7 +6,7 @@ class HomeViewController: UIViewController, LocationServiceDelegate
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
-    var locationService: LocationServiceProtocol!
+    internal var locationService: LocationServiceProtocol!
     
     private let disposeBag = DisposeBag()
     private var currentLocation: LocationProtocol?

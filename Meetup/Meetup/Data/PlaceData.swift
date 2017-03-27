@@ -40,7 +40,9 @@ public class PlaceData: PlaceDataProtocol
                 let id = placeJSON["place_id"].stringValue
                 let name = placeJSON["name"].stringValue
                 let address = placeJSON["vicinity"].string
-                let types = placeJSON["types"].arrayValue.map { "\($0)" }
+                let types = placeJSON["types"].arrayValue.map {
+                    "\($0)".replacingOccurrences(of: "_", with: " ")
+                }
                 let rating = placeJSON["rating"].float
                 
                 return self.placeFactory

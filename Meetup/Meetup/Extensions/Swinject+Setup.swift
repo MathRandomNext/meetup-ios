@@ -26,6 +26,11 @@ private func setupViewConrollers(_ defaultContainer: Container)
     { (r, c) in
         c.placeData = r.resolve(PlaceDataProtocol.self)
     }
+    
+    defaultContainer.storyboardInitCompleted(AccountViewController.self)
+    { (r, c) in
+        c.userData = r.resolve(UserDataProtocol.self)
+    }
 }
 
 private func setupServices(_ defaultContainer: Container)
@@ -49,6 +54,11 @@ private func setupData(_ defaultContainer: Container)
     defaultContainer.register(PlaceDataProtocol.self)
     { r in
         PlaceData(requester: r.resolve(RequesterProcol.self)!, placeFactory: r.resolve(PlaceFactoryProtocol.self)!)
+    }
+    
+    defaultContainer.register(UserDataProtocol.self)
+    { r in
+        UserData(requester: r.resolve(RequesterProcol.self)!)
     }
 }
 

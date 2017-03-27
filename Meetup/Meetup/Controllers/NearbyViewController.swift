@@ -7,10 +7,10 @@ class NearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
 {
     @IBOutlet weak var nearbyPlacesTableView: UITableView!
     
-    var placeData: PlaceDataProtocol!
+    internal var placeData: PlaceDataProtocol!
     
-    var currentLocation: LocationProtocol?
-    var placeType: PlaceType?
+    internal var currentLocation: LocationProtocol?
+    internal var placeType: PlaceType?
     
     private let disposeBag = DisposeBag()
     private var nearbyPlaces = [PlaceProtocol]()
