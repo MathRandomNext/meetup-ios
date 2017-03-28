@@ -10,7 +10,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         UIApplication.shared.statusBarStyle = .lightContent
         
         let userDefaults = UserDefaults.standard
-        print(userDefaults.object(forKey: "user_id"))
         if userDefaults.contains(key: "user_id")
         {
             self.window = UIWindow(frame: UIScreen.main.bounds)
