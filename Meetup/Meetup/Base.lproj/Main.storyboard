@@ -273,7 +273,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="oJw-90-SxV">
             <objects>
-                <tabBarController id="pQL-br-m3P" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="homeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pQL-br-m3P" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="wIg-5T-VSA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -453,16 +453,19 @@
         <!--Tab Bar Controller-->
         <scene sceneID="htj-c0-pdE">
             <objects>
-                <tabBarController id="qAo-jW-MDS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="homeAuthVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qAo-jW-MDS" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="yen-0B-lPk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="88A-eH-eon" kind="relationship" relationship="viewControllers" id="MCf-Zj-1rE"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VhE-cU-EUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-986" y="-762"/>
+            <point key="canvasLocation" x="-957" y="-788"/>
         </scene>
     </scenes>
     <resources>
@@ -471,5 +474,8 @@
         <image name="User Filled-25" width="25" height="25"/>
         <image name="User-25" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3CO-xv-yq2"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.38431372549999998" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -20,6 +20,7 @@ private func setupViewConrollers(_ defaultContainer: Container)
     defaultContainer.storyboardInitCompleted(HomeViewController.self)
     { (r, c) in
         c.locationService = r.resolve(LocationServiceProtocol.self)
+        c.userData = r.resolve(UserDataProtocol.self)
     }
     
     defaultContainer.storyboardInitCompleted(NearbyViewController.self)

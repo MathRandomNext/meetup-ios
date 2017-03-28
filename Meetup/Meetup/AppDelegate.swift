@@ -8,6 +8,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        let userDefaults = UserDefaults.standard
+        print(userDefaults.object(forKey: "user_id"))
+        if userDefaults.contains(key: "user_id")
+        {
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "homeAuthVC")
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

@@ -5,8 +5,10 @@ class HomeViewController: UIViewController, LocationServiceDelegate
 {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var signOutButton: UIBarButtonItem!
     
     internal var locationService: LocationServiceProtocol!
+    internal var userData: UserDataProtocol!
     
     private let disposeBag = DisposeBag()
     private var currentLocation: LocationProtocol?
@@ -15,11 +17,7 @@ class HomeViewController: UIViewController, LocationServiceDelegate
     {
         super.viewDidLoad()
         self.locationService.delegate = self
-    }
-    
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
+        self.setRightBarButtonItem()
     }
     
     @IBAction func onNavigationMenuItemClick(_ sender: UIButton)
@@ -32,6 +30,14 @@ class HomeViewController: UIViewController, LocationServiceDelegate
         nearbyPlacesVC.currentLocation = self.currentLocation
         
         self.navigationController?.show(nearbyPlacesVC, sender: self)
+    }
+    
+    func onSignOutButtonClick()
+    {
+        self.startLoading()
+        self.userData.signOut()
+        self.changeInitialViewController(identifier: "homeVC")
+        self.showSuccess(withStatus: "You have signed out successfully")
     }
     
     func locationService(_ service: LocationServiceProtocol, didUpdateLocation location: LocationProtocol)
@@ -66,7 +72,8 @@ class HomeViewController: UIViewController, LocationServiceDelegate
             if !locationThoroughfare.isEmpty && (subtitle ?? "").isEmpty
             {
                 subtitle = "\(locationThoroughfare) \(locationSubThoroughfare)"
-            } else if !locationThoroughfare.isEmpty && (subtitle ?? "").isEmpty
+            }
+            else if !locationThoroughfare.isEmpty && (subtitle ?? "").isEmpty
             {
                 subtitle! += ", \(locationThoroughfare) \(locationSubThoroughfare)"
             }
@@ -94,5 +101,29 @@ class HomeViewController: UIViewController, LocationServiceDelegate
     {
         self.titleLabel.text = "Unknown location"
         self.subtitleLabel.text = nil
+    }
+    
+    private func setRightBarButtonItem()
+    {
+        if self.userData.isLoggedIn()
+        {
+            let signOutButton = UIBarButtonItem(title: "Sign Out",
+                                                style: .plain,
+                                                target: self,
+                                                action: #selector(HomeViewController.onSignOutButtonClick))
+            self.navigationItem.rightBarButtonItem = signOutButton
+        }
+        else
+        {
+            self.navigationItem.rightBarButtonItem = nil
+        }
+    }
+    
+    private func changeInitialViewController(identifier: String)
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let initialViewController = storyboard
+            .instantiateViewController(withIdentifier: identifier)
+        UIApplication.shared.keyWindow?.rootViewController = initialViewController
     }
 }

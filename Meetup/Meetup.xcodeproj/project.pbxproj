@@ -11,6 +11,7 @@
 		300C8B0A1E898DE6005D8EDE /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C8B091E898DE6005D8EDE /* AccountViewController.swift */; };
 		300C8B0C1E899B67005D8EDE /* UserDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C8B0B1E899B67005D8EDE /* UserDataProtocol.swift */; };
 		300C8B0E1E899B8A005D8EDE /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300C8B0D1E899B8A005D8EDE /* UserData.swift */; };
+		300EFB7D1E8AEFCB005551CB /* UserDefaults+Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300EFB7C1E8AEFCB005551CB /* UserDefaults+Contains.swift */; };
 		3020DCFE1E848D820036320C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DCFD1E848D820036320C /* CoreLocation.framework */; };
 		3020DD001E848D860036320C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DCFF1E848D860036320C /* Alamofire.framework */; };
 		3020DD041E848D8D0036320C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DD011E848D8D0036320C /* SwiftyJSON.framework */; };
@@ -55,6 +56,7 @@
 		300C8B091E898DE6005D8EDE /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountViewController.swift; path = Controllers/AccountViewController.swift; sourceTree = "<group>"; };
 		300C8B0B1E899B67005D8EDE /* UserDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDataProtocol.swift; path = Data/UserDataProtocol.swift; sourceTree = "<group>"; };
 		300C8B0D1E899B8A005D8EDE /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserData.swift; path = Data/UserData.swift; sourceTree = "<group>"; };
+		300EFB7C1E8AEFCB005551CB /* UserDefaults+Contains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserDefaults+Contains.swift"; path = "Extensions/UserDefaults+Contains.swift"; sourceTree = "<group>"; };
 		3020DCFD1E848D820036320C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3020DCFF1E848D860036320C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Meetup-aogtlgfvhyfrxlgpqlbkhxovmowy/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		3020DD011E848D8D0036320C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/Meetup-aogtlgfvhyfrxlgpqlbkhxovmowy/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				307F14B41E81F0950076E60B /* Swinject+Setup.swift */,
 				30D774F11E88964000603765 /* UIViewController+Loading.swift */,
 				30870BCE1E89CB3B00726821 /* String+Count.swift */,
+				300EFB7C1E8AEFCB005551CB /* UserDefaults+Contains.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				3049DCDA1E88320C00054256 /* PlaceFactoryProtocol.swift in Sources */,
 				30724F9E1E88AB74005A5422 /* Response.swift in Sources */,
 				307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */,
+				300EFB7D1E8AEFCB005551CB /* UserDefaults+Contains.swift in Sources */,
 				30870BCF1E89CB3B00726821 /* String+Count.swift in Sources */,
 				3020DD081E848EA60036320C /* LocationServiceProtocol.swift in Sources */,
 				30C069EC1E817F1B001C1A87 /* AppDelegate.swift in Sources */,
