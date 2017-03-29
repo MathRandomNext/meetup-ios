@@ -38,6 +38,7 @@
 		307F14B91E81F1030076E60B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14B81E81F1030076E60B /* Place.swift */; };
 		307F14BD1E81F14A0076E60B /* LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14BC1E81F14A0076E60B /* LocationProtocol.swift */; };
 		307F14BF1E81F1670076E60B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307F14BE1E81F1670076E60B /* Location.swift */; };
+		3081AFA91E8C586D00FE4149 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3081AFA81E8C586D00FE4149 /* PlaceDetailsViewController.swift */; };
 		30870BCF1E89CB3B00726821 /* String+Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30870BCE1E89CB3B00726821 /* String+Count.swift */; };
 		30C069EC1E817F1B001C1A87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C069EB1E817F1B001C1A87 /* AppDelegate.swift */; };
 		30C069F11E817F1B001C1A87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C069EF1E817F1B001C1A87 /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 		307F14B81E81F1030076E60B /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Place.swift; path = Models/Place.swift; sourceTree = "<group>"; };
 		307F14BC1E81F14A0076E60B /* LocationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationProtocol.swift; path = Models/LocationProtocol.swift; sourceTree = "<group>"; };
 		307F14BE1E81F1670076E60B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Models/Location.swift; sourceTree = "<group>"; };
+		3081AFA81E8C586D00FE4149 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDetailsViewController.swift; path = Controllers/PlaceDetailsViewController.swift; sourceTree = "<group>"; };
 		30870BCE1E89CB3B00726821 /* String+Count.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Count.swift"; path = "Extensions/String+Count.swift"; sourceTree = "<group>"; };
 		30C069E81E817F1B001C1A87 /* Meetup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meetup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C069EB1E817F1B001C1A87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				30724F981E88AB62005A5422 /* HomeViewController.swift */,
 				30724F991E88AB62005A5422 /* NearbyViewController.swift */,
 				300C8B091E898DE6005D8EDE /* AccountViewController.swift */,
+				3081AFA81E8C586D00FE4149 /* PlaceDetailsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				307F14B71E81F0E60076E60B /* PlaceProtocol.swift in Sources */,
 				300EFB7D1E8AEFCB005551CB /* UserDefaults+Contains.swift in Sources */,
 				30870BCF1E89CB3B00726821 /* String+Count.swift in Sources */,
+				3081AFA91E8C586D00FE4149 /* PlaceDetailsViewController.swift in Sources */,
 				3020DD081E848EA60036320C /* LocationServiceProtocol.swift in Sources */,
 				30C069EC1E817F1B001C1A87 /* AppDelegate.swift in Sources */,
 				306E44F41E872F20004A7BDB /* PlaceDataProtocol.swift in Sources */,

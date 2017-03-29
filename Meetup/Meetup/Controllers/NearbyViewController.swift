@@ -80,7 +80,8 @@ class NearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return placeCell
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
         var numOfSections = 0
         
         if !self.nearbyPlaces.isEmpty
@@ -100,6 +101,18 @@ class NearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         
         return numOfSections
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        let placeAtIndexPath = self.nearbyPlaces[indexPath.row]
+        
+        let placeDetailsVC = UIStoryboard(name: "Main", bundle: nil)
+            .instantiateViewController(withIdentifier: Constants.ViewControllerIdentifiers.PlaceDetailsViewController)
+            as! PlaceDetailsViewController
+        
+        placeDetailsVC.currentPlace = placeAtIndexPath
+        self.navigationController?.show(placeDetailsVC, sender: self)
     }
 }
 
