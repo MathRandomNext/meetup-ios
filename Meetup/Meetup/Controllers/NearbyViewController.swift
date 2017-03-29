@@ -26,11 +26,6 @@ class NearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         self.nearbyPlacesTableView.delegate = self
         self.nearbyPlacesTableView.dataSource = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool)
-    {
-        super.viewWillAppear(animated)
         
         guard self.currentLocation != nil else
         {
@@ -49,11 +44,6 @@ class NearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
             .subscribe(onNext: { self.nearbyPlaces.append($0) },
                        onCompleted: { self.stopLoading() })
             .disposed(by: disposeBag)
-    }
-    
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
