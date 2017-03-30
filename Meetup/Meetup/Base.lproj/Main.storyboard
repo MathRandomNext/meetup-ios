@@ -31,7 +31,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TIL-ul-qLO" id="ksR-3b-Cqo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gma-QL-6K4" customClass="CosmosView" customModule="Cosmos">
@@ -145,7 +145,49 @@
                     <view key="view" contentMode="scaleToFill" id="brE-uc-1rz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bUH-9a-XBG">
+                                <rect key="frame" x="0.0" y="64" width="414" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="UQt-GP-kMA"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nyc-ee-WJn">
+                                <rect key="frame" x="0.0" y="244" width="414" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kR-tT-aO9">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="100"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="Phone Filled-40"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhN-Ay-1xH">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="100"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="Star Filled-40"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00M-Ya-akS">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="100"/>
+                                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="Domain Filled-40"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0gN-12-viB"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nyc-ee-WJn" firstAttribute="top" secondItem="bUH-9a-XBG" secondAttribute="bottom" id="BBh-ha-apJ"/>
+                            <constraint firstItem="bUH-9a-XBG" firstAttribute="top" secondItem="p8u-jj-xPR" secondAttribute="bottom" id="Mbi-sr-hGP"/>
+                            <constraint firstItem="bUH-9a-XBG" firstAttribute="leading" secondItem="brE-uc-1rz" secondAttribute="leading" id="Rep-37-Cxo"/>
+                            <constraint firstAttribute="trailing" secondItem="nyc-ee-WJn" secondAttribute="trailing" id="Za4-RD-R1f"/>
+                            <constraint firstItem="nyc-ee-WJn" firstAttribute="leading" secondItem="brE-uc-1rz" secondAttribute="leading" id="hXu-bx-VDA"/>
+                            <constraint firstAttribute="trailing" secondItem="bUH-9a-XBG" secondAttribute="trailing" id="xlQ-jn-kDm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O1P-Vy-rDT"/>
                 </viewController>
@@ -559,8 +601,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Domain Filled-40" width="40" height="40"/>
         <image name="Home Filled-25" width="25" height="25"/>
         <image name="Home-25" width="25" height="25"/>
+        <image name="Phone Filled-40" width="40" height="40"/>
+        <image name="Star Filled-40" width="40" height="40"/>
         <image name="User Filled-25" width="25" height="25"/>
         <image name="User-25" width="25" height="25"/>
     </resources>
