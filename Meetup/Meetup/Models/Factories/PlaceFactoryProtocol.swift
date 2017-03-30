@@ -9,6 +9,8 @@ public protocol PlaceFactoryProtocol
                      rating: Float?,
                      photoUrl: String?) -> PlaceProtocol
     
+    func createPlaceDetails() -> PlaceDetailsProtocol
+    
 }
 
 extension PlaceFactoryProtocol

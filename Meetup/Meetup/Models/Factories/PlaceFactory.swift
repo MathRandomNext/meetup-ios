@@ -16,4 +16,9 @@ public class PlaceFactory: PlaceFactoryProtocol
                      rating: rating,
                      photoUrl: photoUrl)
     }
+    
+    public func createPlaceDetails() -> PlaceDetailsProtocol
+    {
+        return PlaceDetails()
+    }
 }

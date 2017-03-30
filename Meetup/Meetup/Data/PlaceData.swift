@@ -52,6 +52,16 @@ public class PlaceData: PlaceDataProtocol
             .map { $0! }
     }
     
+    public func getDetails(placeId: String) -> Observable<PlaceDetailsProtocol>
+    {
+        return self.requester
+            .get(API.placeDetailsUrl(placeId: placeId))
+            .map {
+                print($0)
+                return self.placeFactory.createPlaceDetails()
+            }
+    }
+    
     private lazy var placeTypeQueryString: [PlaceType: String] =
     {
         return [
