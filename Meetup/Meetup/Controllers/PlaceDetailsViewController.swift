@@ -62,6 +62,21 @@ class PlaceDetailsViewController: UIViewController
     
     @IBAction func onBrowseButtonClick(_ sender: Any)
     {
+        guard self.currentPlaceDetails?.websiteUrl != nil else
+        {
+            self.showError(withStatus: "Website not provided")
+            return
+        }
         
+        let websiteUrl = (self.currentPlaceDetails?.websiteUrl)!
+        
+        if let websiteUrl = URL(string: websiteUrl)
+        {
+            UIApplication.shared.open(websiteUrl, options: [:], completionHandler: nil)
+        }
+        else
+        {
+            self.showError(withStatus: "Website not provided")
+        }
     }
 }
