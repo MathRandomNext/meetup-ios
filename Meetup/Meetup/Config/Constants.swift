@@ -12,4 +12,9 @@ public struct Constants
     {
         static let Radius = 50
     }
+    
+    struct Default
+    {
+        static let ImageUrl = "https://bento.cdn.pbs.org/hostedbento-prod/filer_public/_bento_media/img/no-image-available.jpg"
+    }
 }

@@ -1,6 +1,7 @@
 import Foundation
 
-public protocol PlaceDetailsProtocol
+public protocol PlaceDetailsProtocol: PlaceProtocol
 {
-    
+    var websiteUrl: String? { get set }
+    var phoneNumber: String? { get set }
 }

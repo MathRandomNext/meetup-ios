@@ -70,7 +70,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="reD-eB-NtQ">
-                                                    <rect key="frame" x="8" y="7.9999999999999964" width="300" height="53.666666666666657"/>
+                                                    <rect key="frame" x="8" y="8" width="300" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thp-bX-ieR">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="19.333333333333332"/>
@@ -85,7 +85,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dum-gF-k8S">
-                                                            <rect key="frame" x="0.0" y="40.333333333333336" width="300" height="13.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="40.666666666666657" width="300" height="13.333333333333336"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -153,29 +153,29 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="nyc-ee-WJn">
-                                <rect key="frame" x="0.0" y="244" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="244" width="414" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kR-tT-aO9">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="80"/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Phone Filled-40"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhN-Ay-1xH">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="100"/>
+                                        <rect key="frame" x="138" y="0.0" width="138" height="80"/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Star Filled-40"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00M-Ya-akS">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="100"/>
+                                        <rect key="frame" x="276" y="0.0" width="138" height="80"/>
                                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="tintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="Domain Filled-40"/>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="0gN-12-viB"/>
+                                    <constraint firstAttribute="height" constant="80" id="0gN-12-viB"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -190,6 +190,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O1P-Vy-rDT"/>
+                    <connections>
+                        <outlet property="posterImageView" destination="bUH-9a-XBG" id="5wj-Bl-Q29"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CfK-Xe-cZD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

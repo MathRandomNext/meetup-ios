@@ -8,6 +8,8 @@ public protocol PlaceDataProtocol
                    radius: Int,
                    placeType: PlaceType?)
         -> Observable<PlaceProtocol>
+    
+    func getById(placeId: String) -> Observable<PlaceDetailsProtocol>
 }
 
 extension PlaceDataProtocol

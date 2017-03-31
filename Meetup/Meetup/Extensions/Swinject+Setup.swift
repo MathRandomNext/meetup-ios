@@ -32,6 +32,11 @@ private func setupViewConrollers(_ defaultContainer: Container)
     { (r, c) in
         c.userData = r.resolve(UserDataProtocol.self)
     }
+    
+    defaultContainer.storyboardInitCompleted(PlaceDetailsViewController.self)
+    { (r, c) in
+        c.placeData = r.resolve(PlaceDataProtocol.self)
+    }
 }
 
 private func setupServices(_ defaultContainer: Container)

@@ -17,8 +17,23 @@ public class PlaceFactory: PlaceFactoryProtocol
                      photoUrl: photoUrl)
     }
     
-    public func createPlaceDetails() -> PlaceDetailsProtocol
+    public func createPlaceDetails(id: String,
+                                   name: String,
+                                   address: String? = nil,
+                                   types: [String]? = nil,
+                                   rating: Float? = nil,
+                                   photoUrl: String? = nil,
+                                   websiteUrl: String? = nil,
+                                   phoneNumber: String? = nil)
+        -> PlaceDetailsProtocol
     {
-        return PlaceDetails()
+        return PlaceDetails(id: id,
+                            name: name,
+                            address: address,
+                            types: types,
+                            rating: rating,
+                            photoUrl: photoUrl,
+                            websiteUrl: websiteUrl,
+                            phoneNumber: phoneNumber)
     }
 }

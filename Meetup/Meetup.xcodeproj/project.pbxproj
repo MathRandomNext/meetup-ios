@@ -14,6 +14,7 @@
 		300EFB7D1E8AEFCB005551CB /* UserDefaults+Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300EFB7C1E8AEFCB005551CB /* UserDefaults+Contains.swift */; };
 		30117C531E8D46AD00E22895 /* PlaceDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30117C521E8D46AD00E22895 /* PlaceDetailsProtocol.swift */; };
 		30117C551E8D46D400E22895 /* PlaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30117C541E8D46D400E22895 /* PlaceDetails.swift */; };
+		30117C571E8E73C200E22895 /* UIImageView+ImageFromUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30117C561E8E73C200E22895 /* UIImageView+ImageFromUrl.swift */; };
 		3020DCFE1E848D820036320C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DCFD1E848D820036320C /* CoreLocation.framework */; };
 		3020DD001E848D860036320C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DCFF1E848D860036320C /* Alamofire.framework */; };
 		3020DD041E848D8D0036320C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3020DD011E848D8D0036320C /* SwiftyJSON.framework */; };
@@ -62,6 +63,7 @@
 		300EFB7C1E8AEFCB005551CB /* UserDefaults+Contains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserDefaults+Contains.swift"; path = "Extensions/UserDefaults+Contains.swift"; sourceTree = "<group>"; };
 		30117C521E8D46AD00E22895 /* PlaceDetailsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDetailsProtocol.swift; path = Models/PlaceDetailsProtocol.swift; sourceTree = "<group>"; };
 		30117C541E8D46D400E22895 /* PlaceDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDetails.swift; path = Models/PlaceDetails.swift; sourceTree = "<group>"; };
+		30117C561E8E73C200E22895 /* UIImageView+ImageFromUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+ImageFromUrl.swift"; path = "Extensions/UIImageView+ImageFromUrl.swift"; sourceTree = "<group>"; };
 		3020DCFD1E848D820036320C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3020DCFF1E848D860036320C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/Meetup-aogtlgfvhyfrxlgpqlbkhxovmowy/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		3020DD011E848D8D0036320C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/Meetup-aogtlgfvhyfrxlgpqlbkhxovmowy/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				30D774F11E88964000603765 /* UIViewController+Loading.swift */,
 				30870BCE1E89CB3B00726821 /* String+Count.swift */,
 				300EFB7C1E8AEFCB005551CB /* UserDefaults+Contains.swift */,
+				30117C561E8E73C200E22895 /* UIImageView+ImageFromUrl.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				307F14BF1E81F1670076E60B /* Location.swift in Sources */,
 				307F14BD1E81F14A0076E60B /* LocationProtocol.swift in Sources */,
 				307F14B91E81F1030076E60B /* Place.swift in Sources */,
+				30117C571E8E73C200E22895 /* UIImageView+ImageFromUrl.swift in Sources */,
 				30117C551E8D46D400E22895 /* PlaceDetails.swift in Sources */,
 				30724F9F1E88AB74005A5422 /* ResponseProtocol.swift in Sources */,
 				306E44F61E872F3F004A7BDB /* PlaceData.swift in Sources */,

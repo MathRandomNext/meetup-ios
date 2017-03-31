@@ -7,8 +7,9 @@ target 'Meetup' do
   pod 'SwinjectStoryboard'
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'SVProgressHUD'
   pod 'RxSwift',    '~> 3.0'
   pod 'RxCocoa',    '~> 3.0'
   pod 'Cosmos',     '~> 8.0'
-  pod 'SVProgressHUD'
+  pod 'Kingfisher', '~> 3.0'
 end

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.4.0)
   - Cosmos (8.0.2)
+  - Kingfisher (3.5.2)
   - RxCocoa (3.3.1):
     - RxSwift (~> 3.3)
   - RxSwift (3.3.1)
@@ -13,6 +14,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Cosmos (~> 8.0)
+  - Kingfisher (~> 3.0)
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - SVProgressHUD
@@ -23,6 +25,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
   Cosmos: 007c0b8e33a85e5363911bdd933571bbe221f7ef
+  Kingfisher: 9950e382c500b6834ce004c7c4131c444e90c3a1
   RxCocoa: 7dcb7a1860fc9cd0e23dae67ab105fc2916670b6
   RxSwift: 8fc9f2de6275a9101d518444e00bf32f1a42caac
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
@@ -30,6 +33,6 @@ SPEC CHECKSUMS:
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
   SwinjectStoryboard: 8e0d3c0202b64172bdf915d55e8dc83d9c4e7863
 
-PODFILE CHECKSUM: 8529502404778763ec3f4240dea6d5bff9f3ee77
+PODFILE CHECKSUM: 3add060b477b581a7e1efd3a5d386cf896794a71
 
 COCOAPODS: 1.2.0
