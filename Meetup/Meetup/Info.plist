@@ -21,9 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Without giving location permission the app won't be able to function.</string>
+	<string>Without giving location permission the app won&apos;t be able to function.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Without giving location permission the app won't be able to function.</string>
+	<string>Without giving location permission the app won&apos;t be able to function.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

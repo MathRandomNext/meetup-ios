@@ -73,7 +73,9 @@ public class PlaceData: PlaceDataProtocol
                 let rating = resultJSON["rating"].float
                 let address = resultJSON["vicinity"].string
                 let websiteUrl = resultJSON["website"].string
-                let phoneNumber = resultJSON["formatted_phone_number"].string
+                let phoneNumber = resultJSON["international_phone_number"].string?
+                    .replacingOccurrences(of: " ", with: "")
+                    .replacingOccurrences(of: "+", with: "")
                 let photoReference = resultJSON["photos"][0]["photo_reference"].string
                 var photoUrl: String?
                 if let photoReference = photoReference

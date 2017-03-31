@@ -228,6 +228,9 @@
                                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="Phone Filled-40"/>
+                                                <connections>
+                                                    <action selector="onCallButtonClick:" destination="2Jg-hM-uRo" eventType="touchUpInside" id="nMK-ix-H1D"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhN-Ay-1xH">
                                                 <rect key="frame" x="138" y="0.0" width="138" height="90"/>
@@ -240,6 +243,9 @@
                                                 <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="tintColor" red="0.35686274509999999" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="Domain Filled-40"/>
+                                                <connections>
+                                                    <action selector="onBrowseButtonClick:" destination="2Jg-hM-uRo" eventType="touchUpInside" id="nt9-9B-tMd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
