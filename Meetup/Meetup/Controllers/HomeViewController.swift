@@ -107,10 +107,11 @@ class HomeViewController: UIViewController, LocationServiceDelegate
     {
         if self.userData.isLoggedIn()
         {
-            let signOutButton = UIBarButtonItem(title: "Sign Out",
-                                                style: .plain,
-                                                target: self,
-                                                action: #selector(HomeViewController.onSignOutButtonClick))
+            let signOutButton = UIBarButtonItem(
+                title: "Sign Out",
+                style: .plain,
+                target: self,
+                action: #selector(HomeViewController.onSignOutButtonClick))
             self.navigationItem.rightBarButtonItem = signOutButton
         }
         else

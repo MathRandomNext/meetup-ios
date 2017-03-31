@@ -103,6 +103,8 @@ class NearbyViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         placeDetailsVC.currentPlace = placeAtIndexPath
         self.navigationController?.show(placeDetailsVC, sender: self)
+        
+        self.nearbyPlacesTableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
