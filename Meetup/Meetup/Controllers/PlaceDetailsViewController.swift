@@ -20,24 +20,7 @@ class PlaceDetailsViewController: UIViewController
         super.viewDidLoad()
         self.title = currentPlace.name
         self.startLoading()
-
-        self.placeData
-            .getById(placeId: self.currentPlace.id)
-            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { placeDetails in
-                self.currentPlaceDetails = placeDetails
-                let url = URL(string: placeDetails.photoUrl ?? Constants.Default.ImageUrl)!
-                self.posterImageView.setImageFromUrl(imageUrl: url)
-                self.placeNameLabel.text = placeDetails.name
-                self.placeRating.rating = Double(placeDetails.rating ?? 0)
-                
-                if let placeTypes = placeDetails.types
-                {
-                    self.placeType.text = placeTypes.count > 0 ? placeTypes[0] : nil
-                }
-            }, onCompleted: { self.stopLoading() })
-            .disposed(by: disposeBag)
+        self.loadData(onCompleted: { self.stopLoading() })
     }
     
     @IBAction func onCallButtonClick(_ sender: Any)
@@ -78,5 +61,26 @@ class PlaceDetailsViewController: UIViewController
         {
             self.showError(withStatus: "Website not provided")
         }
+    }
+    
+    private func loadData(onCompleted: @escaping () -> Void)
+    {
+        self.placeData
+            .getById(placeId: self.currentPlace.id)
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { placeDetails in
+                self.currentPlaceDetails = placeDetails
+                let url = URL(string: placeDetails.photoUrl ?? Constants.Default.ImageUrl)!
+                self.posterImageView.setImageFromUrl(imageUrl: url)
+                self.placeNameLabel.text = placeDetails.name
+                self.placeRating.rating = Double(placeDetails.rating ?? 0)
+                
+                if let placeTypes = placeDetails.types
+                {
+                    self.placeType.text = placeTypes.count > 0 ? placeTypes[0] : nil
+                }
+            }, onCompleted: onCompleted)
+            .disposed(by: disposeBag)
     }
 }
