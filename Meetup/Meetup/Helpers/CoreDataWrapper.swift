@@ -29,6 +29,19 @@ internal class CoreDataWrapper: CoreDataWrapperProtocol
         self.context.insert(object)
     }
     
+    func fetch(entityName: String, withFetchLimit limit: Int? = nil) -> [Any]?
+    {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        
+        if let limit = limit
+        {
+            fetchRequest.fetchLimit = limit
+        }
+        
+        let data = try? self.context.fetch(fetchRequest)
+        return data
+    }
+    
     func saveContext()
     {
         self.appDelegate.saveContext()

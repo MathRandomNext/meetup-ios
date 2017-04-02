@@ -1,5 +1,6 @@
 import Foundation
 import SwiftyJSON
+import CoreData
 import RxSwift
 
 public class PlaceData: PlaceDataProtocol
@@ -98,13 +99,24 @@ public class PlaceData: PlaceDataProtocol
                 return place
                 }
     }
-    
+
     public func getRecent()
     {
+        let entityName = String(describing: RecentPlace.self)
+        let recentPlaces = self.coreData
+            .fetch(entityName: entityName, withFetchLimit: 3)
+            as? [RecentPlace]
+        
+        print(recentPlaces)
     }
     
     public func saveToRecent(place: PlaceProtocol)
     {
+        if updatePlaceIfExists(id: place.id)
+        {
+            return
+        }
+        
         let entityName = String(describing: RecentPlace.self)
         let entity = self.coreData.createEntity(for: entityName)!
         let entityPlace = RecentPlace(entity: entity, insertInto: self.coreData.context)
@@ -113,9 +125,34 @@ public class PlaceData: PlaceDataProtocol
         entityPlace.name = place.name
         entityPlace.rating = place.rating ?? 0
         entityPlace.photoUrl = place.photoUrl
+        entityPlace.date = NSDate()
         
         self.coreData.context.insert(entityPlace)
         self.coreData.saveContext()
+        
+        self.getRecent()
+    }
+    
+    // TODO: Refactor
+    private func updatePlaceIfExists(id: String) -> Bool
+    {
+        let entityName = String(describing: RecentPlace.self)
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        fetchRequest.predicate = NSPredicate(format: "id = %@", id)
+        
+        if let fetchResults = try? self.coreData.context.fetch(fetchRequest) as? [RecentPlace]
+        {
+            if fetchResults!.count != 0
+            {
+                let recentPlace = fetchResults![0]
+                recentPlace.date = NSDate()
+                
+                self.coreData.saveContext()
+                return true
+            }
+        }
+        
+        return false
     }
     
     private lazy var placeTypeQueryString: [PlaceType: String] =
