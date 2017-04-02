@@ -28,6 +28,7 @@
 		3049DCDA1E88320C00054256 /* PlaceFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCD91E88320C00054256 /* PlaceFactoryProtocol.swift */; };
 		3049DCDC1E88322700054256 /* PlaceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCDB1E88322700054256 /* PlaceFactory.swift */; };
 		3049DCDF1E883D1400054256 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3049DCDD1E883D1400054256 /* Constants.swift */; };
+		3051F1C41E913E6C009CAF00 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3051F1C21E913E6C009CAF00 /* Model.xcdatamodeld */; };
 		306E44F41E872F20004A7BDB /* PlaceDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */; };
 		306E44F61E872F3F004A7BDB /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F51E872F3F004A7BDB /* PlaceData.swift */; };
 		30724F9A1E88AB62005A5422 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30724F981E88AB62005A5422 /* HomeViewController.swift */; };
@@ -78,6 +79,7 @@
 		3049DCDB1E88322700054256 /* PlaceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceFactory.swift; path = Models/Factories/PlaceFactory.swift; sourceTree = "<group>"; };
 		3049DCDD1E883D1400054256 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Config/Constants.swift; sourceTree = "<group>"; };
 		3049DCE11E883D8600054256 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3051F1C31E913E6C009CAF00 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDataProtocol.swift; path = Data/PlaceDataProtocol.swift; sourceTree = "<group>"; };
 		306E44F51E872F3F004A7BDB /* PlaceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceData.swift; path = Data/PlaceData.swift; sourceTree = "<group>"; };
 		30724F981E88AB62005A5422 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				3049DCE11E883D8600054256 /* Info.plist */,
 				30C069F21E817F1B001C1A87 /* Assets.xcassets */,
 				30C069F41E817F1B001C1A87 /* LaunchScreen.storyboard */,
+				3051F1C21E913E6C009CAF00 /* Model.xcdatamodeld */,
 			);
 			path = Meetup;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				306E44F41E872F20004A7BDB /* PlaceDataProtocol.swift in Sources */,
 				30DF6A0E1E8761CD0020D28D /* ResponseFactoryProtocol.swift in Sources */,
 				30724F9A1E88AB62005A5422 /* HomeViewController.swift in Sources */,
+				3051F1C41E913E6C009CAF00 /* Model.xcdatamodeld in Sources */,
 				30724FA21E88AB87005A5422 /* Requester.swift in Sources */,
 				30117C531E8D46AD00E22895 /* PlaceDetailsProtocol.swift in Sources */,
 				30DF6A101E8761F70020D28D /* ResponseFactory.swift in Sources */,
@@ -603,6 +607,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3051F1C21E913E6C009CAF00 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3051F1C31E913E6C009CAF00 /* Model.xcdatamodel */,
+			);
+			currentVersion = 3051F1C31E913E6C009CAF00 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 30C069E01E817F1B001C1A87 /* Project object */;
 }

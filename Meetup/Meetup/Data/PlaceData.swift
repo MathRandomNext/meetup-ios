@@ -1,4 +1,5 @@
 import Foundation
+import CoreData
 import SwiftyJSON
 import RxSwift
 
@@ -95,6 +96,11 @@ public class PlaceData: PlaceDataProtocol
 
                 return place
                 }
+    }
+    
+    public func saveToRecent()
+    {
+        
     }
 
     private lazy var placeTypeQueryString: [PlaceType: String] =
