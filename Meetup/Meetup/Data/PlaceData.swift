@@ -103,8 +103,10 @@ public class PlaceData: PlaceDataProtocol
     public func getRecent() -> [RecentPlace]
     {
         let entityName = String(describing: RecentPlace.self)
+        let sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+        
         let recentPlaces = self.coreData
-            .fetch(entityName: entityName, withFetchLimit: 3)
+            .fetch(entityName: entityName, withFetchLimit: 3, withSortDescriptors: sortDescriptors)
             as? [RecentPlace]
         
         return recentPlaces ?? [RecentPlace]()

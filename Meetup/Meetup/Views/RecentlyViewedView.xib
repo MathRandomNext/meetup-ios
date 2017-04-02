@@ -11,6 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecentlyViewedView" customModule="Meetup" customModuleProvider="target">
             <connections>
+                <outlet property="firstCellImage" destination="PN9-mr-XJs" id="c2U-AM-eyi"/>
+                <outlet property="firstCellRating" destination="ic5-ah-Gqv" id="71m-Cn-mfJ"/>
+                <outlet property="firstCellTitle" destination="wnh-bM-nYo" id="3ck-82-oab"/>
+                <outlet property="secondCellImage" destination="z8n-71-es4" id="MmP-si-doI"/>
+                <outlet property="secondCellRating" destination="JFY-DF-0t6" id="3ex-Zb-R1v"/>
+                <outlet property="secondCellTitle" destination="nid-4H-tcR" id="cxc-Fv-7YI"/>
+                <outlet property="thirdCellImage" destination="lRU-3g-wHR" id="3eT-sd-jYf"/>
+                <outlet property="thirdCellRating" destination="2AI-yC-GvV" id="rCN-vy-IKP"/>
+                <outlet property="thirdCellTitle" destination="6lN-Zu-3oq" id="jml-2g-MkI"/>
                 <outlet property="view" destination="iN0-l3-epB" id="rxg-in-tD9"/>
             </connections>
         </placeholder>
@@ -19,31 +28,76 @@
             <rect key="frame" x="0.0" y="0.0" width="551" height="151"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tzI-Nc-6Qj">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tzI-Nc-6Qj">
                     <rect key="frame" x="0.0" y="0.0" width="551" height="151"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="88e-QE-Gyz">
-                            <rect key="frame" x="0.0" y="0.0" width="183.5" height="151"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="88e-QE-Gyz">
+                            <rect key="frame" x="0.0" y="0.0" width="163.5" height="151"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Domain Filled-40" translatesAutoresizingMaskIntoConstraints="NO" id="PN9-mr-XJs">
-                                    <rect key="frame" x="0.0" y="0.0" width="183.5" height="151"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PN9-mr-XJs">
+                                    <rect key="frame" x="0.0" y="0.0" width="163.5" height="50.5"/>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnh-bM-nYo">
+                                    <rect key="frame" x="0.0" y="50.5" width="163.5" height="50"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic5-ah-Gqv" customClass="CosmosView" customModule="Cosmos">
+                                    <rect key="frame" x="0.0" y="100.5" width="163.5" height="50.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7dR-RY-7Xu">
-                            <rect key="frame" x="183.5" y="0.0" width="184" height="151"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7dR-RY-7Xu">
+                            <rect key="frame" x="193.5" y="0.0" width="164" height="151"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home-25" translatesAutoresizingMaskIntoConstraints="NO" id="z8n-71-es4">
-                                    <rect key="frame" x="0.0" y="0.0" width="184" height="151"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z8n-71-es4">
+                                    <rect key="frame" x="0.0" y="0.0" width="164" height="50.5"/>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nid-4H-tcR">
+                                    <rect key="frame" x="0.0" y="50.5" width="164" height="50"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFY-DF-0t6" customClass="CosmosView" customModule="Cosmos">
+                                    <rect key="frame" x="0.0" y="100.5" width="164" height="50.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
                             </subviews>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-Ek-eO3">
-                            <rect key="frame" x="367.5" y="0.0" width="183.5" height="151"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-Ek-eO3">
+                            <rect key="frame" x="387.5" y="0.0" width="163.5" height="151"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home-50" translatesAutoresizingMaskIntoConstraints="NO" id="lRU-3g-wHR">
-                                    <rect key="frame" x="0.0" y="0.0" width="183.5" height="151"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lRU-3g-wHR">
+                                    <rect key="frame" x="0.0" y="0.0" width="163.5" height="50.5"/>
                                 </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lN-Zu-3oq">
+                                    <rect key="frame" x="0.0" y="50.5" width="163.5" height="50"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2AI-yC-GvV" customClass="CosmosView" customModule="Cosmos">
+                                    <rect key="frame" x="0.0" y="100.5" width="163.5" height="50.5"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
                             </subviews>
                         </stackView>
                     </subviews>
@@ -61,9 +115,4 @@
             <point key="canvasLocation" x="112.5" y="-205.5"/>
         </view>
     </objects>
-    <resources>
-        <image name="Domain Filled-40" width="40" height="40"/>
-        <image name="Home-25" width="25" height="25"/>
-        <image name="Home-50" width="50" height="50"/>
-    </resources>
 </document>

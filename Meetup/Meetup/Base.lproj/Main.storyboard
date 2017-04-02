@@ -420,6 +420,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="KXM-J8-ge3"/>
                     <connections>
+                        <outlet property="recentlyViewedView" destination="U1e-bK-ssl" id="jSr-2q-b4G"/>
                         <outlet property="subtitleLabel" destination="wCz-qL-DxY" id="G4D-Mo-VEC"/>
                         <outlet property="titleLabel" destination="1wc-fF-UV7" id="fg2-8P-wap"/>
                     </connections>

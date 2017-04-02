@@ -6,6 +6,7 @@ class HomeViewController: UIViewController, LocationServiceDelegate
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var signOutButton: UIBarButtonItem!
+    @IBOutlet weak var recentlyViewedView: RecentlyViewedView!
     
     internal var locationService: LocationServiceProtocol!
     internal var userData: UserDataProtocol!
@@ -18,6 +19,10 @@ class HomeViewController: UIViewController, LocationServiceDelegate
         super.viewDidLoad()
         self.locationService.delegate = self
         self.setRightBarButtonItem()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.recentlyViewedView.reloadData()
     }
     
     @IBAction func onNavigationMenuItemClick(_ sender: UIButton)

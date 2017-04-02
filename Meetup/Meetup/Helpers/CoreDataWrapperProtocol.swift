@@ -11,15 +11,21 @@ internal protocol CoreDataWrapperProtocol
     
     func insert(_ object: NSManagedObject)
     
-    func fetch(entityName: String, withFetchLimit limit: Int?) -> [Any]?
+    func fetch(entityName: String,
+               withFetchLimit limit: Int?,
+               withSortDescriptors sortDescriptors: [NSSortDescriptor]?)
+    -> [Any]?
     
     func saveContext()
 }
 
 extension CoreDataWrapperProtocol
 {
-    func fetch(entityName: String, withFetchLimit limit: Int? = nil) -> [Any]?
+    func fetch(entityName: String,
+               withFetchLimit limit: Int? = nil,
+               withSortDescriptors sortDescriptors: [NSSortDescriptor]? = nil)
+        -> [Any]?
     {
-        return fetch(entityName: entityName, withFetchLimit: limit)
+        return fetch(entityName: entityName, withFetchLimit: limit, withSortDescriptors: sortDescriptors)
     }
 }
