@@ -11,6 +11,8 @@ public protocol PlaceDataProtocol
     
     func getById(placeId: String) -> Observable<PlaceDetailsProtocol>
     
+    func getRecent() -> [RecentPlace]
+    
     func saveToRecent(place: PlaceProtocol)
 }
 

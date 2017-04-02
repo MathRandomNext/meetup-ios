@@ -100,14 +100,14 @@ public class PlaceData: PlaceDataProtocol
                 }
     }
 
-    public func getRecent()
+    public func getRecent() -> [RecentPlace]
     {
         let entityName = String(describing: RecentPlace.self)
         let recentPlaces = self.coreData
             .fetch(entityName: entityName, withFetchLimit: 3)
             as? [RecentPlace]
         
-        print(recentPlaces)
+        return recentPlaces ?? [RecentPlace]()
     }
     
     public func saveToRecent(place: PlaceProtocol)
@@ -129,8 +129,6 @@ public class PlaceData: PlaceDataProtocol
         
         self.coreData.context.insert(entityPlace)
         self.coreData.saveContext()
-        
-        self.getRecent()
     }
     
     // TODO: Refactor
