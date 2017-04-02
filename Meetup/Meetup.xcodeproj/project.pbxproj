@@ -31,6 +31,8 @@
 		3051F1C41E913E6C009CAF00 /* Meetup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3051F1C21E913E6C009CAF00 /* Meetup.xcdatamodeld */; };
 		3051F1E91E9161AF009CAF00 /* CoreDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3051F1E81E9161AF009CAF00 /* CoreDataWrapper.swift */; };
 		3051F1EB1E9161DE009CAF00 /* CoreDataWrapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3051F1EA1E9161DE009CAF00 /* CoreDataWrapperProtocol.swift */; };
+		3051F1EE1E9188CE009CAF00 /* RecentlyViewedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3051F1ED1E9188CE009CAF00 /* RecentlyViewedView.swift */; };
+		3051F1F61E919181009CAF00 /* RecentlyViewedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3051F1F51E919181009CAF00 /* RecentlyViewedView.xib */; };
 		306E44F41E872F20004A7BDB /* PlaceDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */; };
 		306E44F61E872F3F004A7BDB /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306E44F51E872F3F004A7BDB /* PlaceData.swift */; };
 		30724F9A1E88AB62005A5422 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30724F981E88AB62005A5422 /* HomeViewController.swift */; };
@@ -84,6 +86,8 @@
 		3051F1C31E913E6C009CAF00 /* Meetup.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Meetup.xcdatamodel; sourceTree = "<group>"; };
 		3051F1E81E9161AF009CAF00 /* CoreDataWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataWrapper.swift; path = Helpers/CoreDataWrapper.swift; sourceTree = "<group>"; };
 		3051F1EA1E9161DE009CAF00 /* CoreDataWrapperProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataWrapperProtocol.swift; path = Helpers/CoreDataWrapperProtocol.swift; sourceTree = "<group>"; };
+		3051F1ED1E9188CE009CAF00 /* RecentlyViewedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecentlyViewedView.swift; path = Views/RecentlyViewedView.swift; sourceTree = "<group>"; };
+		3051F1F51E919181009CAF00 /* RecentlyViewedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RecentlyViewedView.xib; path = Views/RecentlyViewedView.xib; sourceTree = "<group>"; };
 		306E44F31E872F20004A7BDB /* PlaceDataProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceDataProtocol.swift; path = Data/PlaceDataProtocol.swift; sourceTree = "<group>"; };
 		306E44F51E872F3F004A7BDB /* PlaceData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceData.swift; path = Data/PlaceData.swift; sourceTree = "<group>"; };
 		30724F981E88AB62005A5422 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Controllers/HomeViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,15 @@
 			name = Config;
 			sourceTree = "<group>";
 		};
+		3051F1EC1E91889E009CAF00 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3051F1ED1E9188CE009CAF00 /* RecentlyViewedView.swift */,
+				3051F1F51E919181009CAF00 /* RecentlyViewedView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		30C069DF1E817F1B001C1A87 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +204,7 @@
 		30C069EA1E817F1B001C1A87 /* Meetup */ = {
 			isa = PBXGroup;
 			children = (
+				3051F1EC1E91889E009CAF00 /* Views */,
 				30D774F01E88961900603765 /* Extensions */,
 				3049DCD61E88283300054256 /* Config */,
 				303024AF1E845D07008BDB05 /* Services */,
@@ -351,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3051F1F61E919181009CAF00 /* RecentlyViewedView.xib in Resources */,
 				30C069F61E817F1B001C1A87 /* LaunchScreen.storyboard in Resources */,
 				30C069F31E817F1B001C1A87 /* Assets.xcassets in Resources */,
 				30C069F11E817F1B001C1A87 /* Main.storyboard in Resources */,
@@ -438,6 +453,7 @@
 				300C8B0C1E899B67005D8EDE /* UserDataProtocol.swift in Sources */,
 				307F14BF1E81F1670076E60B /* Location.swift in Sources */,
 				307F14BD1E81F14A0076E60B /* LocationProtocol.swift in Sources */,
+				3051F1EE1E9188CE009CAF00 /* RecentlyViewedView.swift in Sources */,
 				307F14B91E81F1030076E60B /* Place.swift in Sources */,
 				30117C571E8E73C200E22895 /* UIImageView+ImageFromUrl.swift in Sources */,
 				30117C551E8D46D400E22895 /* PlaceDetails.swift in Sources */,
