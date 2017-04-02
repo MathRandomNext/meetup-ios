@@ -1,16 +1,17 @@
 import Foundation
-import CoreData
 import SwiftyJSON
 import RxSwift
 
 public class PlaceData: PlaceDataProtocol
 {
     private let requester: RequesterProcol
+    private let coreData: CoreDataWrapperProtocol
     private let placeFactory: PlaceFactoryProtocol
     
-    init(requester: RequesterProcol, placeFactory: PlaceFactoryProtocol)
+    init(requester: RequesterProcol, coreData: CoreDataWrapperProtocol, placeFactory: PlaceFactoryProtocol)
     {
         self.requester = requester
+        self.coreData = coreData
         self.placeFactory = placeFactory
     }
     
@@ -98,11 +99,25 @@ public class PlaceData: PlaceDataProtocol
                 }
     }
     
-    public func saveToRecent()
+    public func getRecent()
     {
-        
     }
-
+    
+    public func saveToRecent(place: PlaceProtocol)
+    {
+        let entityName = String(describing: RecentPlace.self)
+        let entity = self.coreData.createEntity(for: entityName)!
+        let entityPlace = RecentPlace(entity: entity, insertInto: self.coreData.context)
+        
+        entityPlace.id = place.id
+        entityPlace.name = place.name
+        entityPlace.rating = place.rating ?? 0
+        entityPlace.photoUrl = place.photoUrl
+        
+        self.coreData.context.insert(entityPlace)
+        self.coreData.saveContext()
+    }
+    
     private lazy var placeTypeQueryString: [PlaceType: String] =
         {
             return [

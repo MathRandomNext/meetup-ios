@@ -53,13 +53,21 @@ private func setupHelpers(_ defaultContainer: Container)
     { r in
         Requester(responseFactory: r.resolve(ResponseFactoryProtocol.self)!)
     }
+    
+    defaultContainer.register(CoreDataWrapperProtocol.self)
+    { _ in
+        CoreDataWrapper()
+    }
 }
 
 private func setupData(_ defaultContainer: Container)
 {
     defaultContainer.register(PlaceDataProtocol.self)
     { r in
-        PlaceData(requester: r.resolve(RequesterProcol.self)!, placeFactory: r.resolve(PlaceFactoryProtocol.self)!)
+        PlaceData(
+            requester: r.resolve(RequesterProcol.self)!,
+            coreData: r.resolve(CoreDataWrapperProtocol.self)!,
+            placeFactory: r.resolve(PlaceFactoryProtocol.self)!)
     }
     
     defaultContainer.register(UserDataProtocol.self)

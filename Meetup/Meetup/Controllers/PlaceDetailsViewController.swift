@@ -70,7 +70,9 @@ class PlaceDetailsViewController: UIViewController
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { placeDetails in
+                self.placeData.saveToRecent(place: placeDetails)
                 self.currentPlaceDetails = placeDetails
+                
                 let url = URL(string: placeDetails.photoUrl ?? Constants.Default.ImageUrl)!
                 self.posterImageView.setImageFromUrl(imageUrl: url)
                 self.placeNameLabel.text = placeDetails.name

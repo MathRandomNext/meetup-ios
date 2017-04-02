@@ -10,6 +10,8 @@ public protocol PlaceDataProtocol
         -> Observable<PlaceProtocol>
     
     func getById(placeId: String) -> Observable<PlaceDetailsProtocol>
+    
+    func saveToRecent(place: PlaceProtocol)
 }
 
 extension PlaceDataProtocol
