@@ -83,7 +83,7 @@ public class PlaceData: PlaceDataProtocol
                     photoUrl = API.placePhotoUrl(photoReference: photoReference, maxWidth: 400)
                 }
                 
-                return self.placeFactory.createPlaceDetails(
+                let place = self.placeFactory.createPlaceDetails(
                     id: id,
                     name: name,
                     address: address,
@@ -92,9 +92,11 @@ public class PlaceData: PlaceDataProtocol
                     photoUrl: photoUrl,
                     websiteUrl: websiteUrl,
                     phoneNumber: phoneNumber)
+
+                return place
                 }
     }
-    
+
     private lazy var placeTypeQueryString: [PlaceType: String] =
         {
             return [

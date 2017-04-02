@@ -149,7 +149,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="b4B-cQ-Q6v">
                                 <rect key="frame" x="0.0" y="64" width="414" height="380"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bUH-9a-XBG">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bUH-9a-XBG" customClass="AnimatedImageView" customModule="Kingfisher">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="180" id="1cL-g2-zRT"/>
@@ -697,7 +697,7 @@
         <image name="User-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MCf-Zj-1rE"/>
+        <segue reference="3CO-xv-yq2"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.38431372549999998" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

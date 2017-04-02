@@ -27,7 +27,7 @@ class PlaceDetailsViewController: UIViewController
     {
         guard self.currentPlaceDetails?.phoneNumber != nil else
         {
-            self.showError(withStatus: "Phone number not provided")
+            self.showInfo(withStatus: "Phone number not provided")
             return
         }
         
@@ -39,7 +39,7 @@ class PlaceDetailsViewController: UIViewController
         }
         else
         {
-            self.showError(withStatus: "Phone number not provided")
+            self.showInfo(withStatus: "Phone number not provided")
         }
     }
     
@@ -47,7 +47,7 @@ class PlaceDetailsViewController: UIViewController
     {
         guard self.currentPlaceDetails?.websiteUrl != nil else
         {
-            self.showError(withStatus: "Website not provided")
+            self.showInfo(withStatus: "Website not provided")
             return
         }
         
@@ -59,7 +59,7 @@ class PlaceDetailsViewController: UIViewController
         }
         else
         {
-            self.showError(withStatus: "Website not provided")
+            self.showInfo(withStatus: "Website not provided")
         }
     }
     

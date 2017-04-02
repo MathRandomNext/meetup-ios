@@ -30,4 +30,11 @@ extension UIViewController
         SVProgressHUD.showSuccess(withStatus: status)
         UIApplication.shared.endIgnoringInteractionEvents()
     }
+    
+    func showInfo(withStatus status: String? = nil)
+    {
+        SVProgressHUD.setMaximumDismissTimeInterval(1)
+        SVProgressHUD.showInfo(withStatus: status)
+        UIApplication.shared.endIgnoringInteractionEvents()
+    }
 }
